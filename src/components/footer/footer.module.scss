@@ -1,0 +1,21 @@
+footer {
+  background-color: #07090f;
+  color: rgba(255,255,255,0.5);
+  display: flex;
+
+  > div {
+    width: 33.33%;
+    padding: 1em;
+  }
+
+  a {
+    text-decoration: none;
+    color: #FFFFFF;
+  }
+
+  h4 {
+    margin-top: 0;
+    text-transform: uppercase;
+    color: #dd3478;
+  }
+}

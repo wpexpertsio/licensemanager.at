@@ -1,0 +1,36 @@
+nav {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 1360px;
+  height: 60px;
+  background-color: #FFFFFF;
+  z-index: 99999;
+  padding: 0 2em;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+     -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+
+  > div {
+    align-self: center;
+
+    img {
+      margin: 0;
+    }
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      display: inline-block;
+      margin-right: 1rem;
+
+      a {
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+    }
+  }
+}
