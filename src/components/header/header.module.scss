@@ -1,5 +1,27 @@
 header {
-  h1 {
-    font-weight: 800;
+  display: flex;
+  background-color: #8F1948;
+  background-image: url("https://www.licensemanager.at/wp-content/uploads/2019/12/docs_header.png");
+  height: 200px;
+
+  div {
+    width: 100%;
+    align-self: center;
+    text-align: center;
+
+    h1 {
+      color: #FFFFFF;
+      font-weight: 800;
+      margin: 0;
+      font-size: 48px;
+      text-shadow: .03em .03em 0 rgba(0,0,0,0.4);
+    }
+
+    p {
+      color: #FFFFFF;
+      font-size: 20px;
+      margin: 0;
+      text-shadow: .03em .03em 0 rgba(0,0,0,0.4);
+    }
   }
 }
