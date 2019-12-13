@@ -1,15 +1,16 @@
 import React from "react"
 import styles from "./navigation.module.scss"
+import logo from "../../images/logo_horizontal.png"
 import { Link } from "gatsby"
 
-export default ({ children }) => (
+export default () => (
   <nav>
-    <div className={styles.logo}>
+    <div className={ styles.logo }>
       <a href="/">
-        <img src="https://licensemanager.at/wp-content/uploads/2019/09/logo-horizontal.png" alt="License Manager for WooCommerce"/>
+        <img src={ logo }/>
       </a>
     </div>
-    <div className={styles.links}>
+    <div className={ styles.links }>
       <ul>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about/">About</Link></li>
