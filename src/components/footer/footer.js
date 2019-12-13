@@ -1,13 +1,11 @@
 import React from "react"
-import { Link } from "gatsby"
 import styles from "./footer.module.scss"
-import { config } from "../../config.js"
 
 export default () => (
   <footer>
 
-    <div className={styles.footerColumn}>
-      <h4 className={styles.footerTitle}>Newsletter</h4>
+    <div className={ styles.footerColumn }>
+      <h4 className={ styles.footerTitle }>Newsletter</h4>
       <p>Subscribe to the plugin newsletter to always stay up to date. No spam, that's a promise.</p>
       <input type="text" placeholder="Email (required)"/>
       <br/>
@@ -18,19 +16,19 @@ export default () => (
       <input type="submit" value="Subscribe"/>
     </div>
 
-    <div className={styles.footerColumn}>
-      <h4 className={styles.footerTitle}>Social Media</h4>
-      <Link to={config.gitHub} target="_blank">GitHub</Link>
+    <div className={ styles.footerColumn }>
+      <h4 className={ styles.footerTitle }>Social Media</h4>
+      <a href="https://github.com/drazenbebic" target="_blank" rel="noopener noreferrer">GitHub</a>
       <br/>
-      <Link to={config.linkedIn} target="_blank">LinkedIn</Link>
+      <a href="https://www.linkedin.com/in/drazenbebic/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       <br/>
-      <Link to={config.xing} target="_blank">Xing</Link>
+      <a href="https://www.xing.com/profile/Drazen_Bebic/" target="_blank" rel="noopener noreferrer">Xing</a>
       <br/>
-      <Link to={config.wordPress} target="_blank">WordPress.org</Link>
+      <a href="https://profiles.wordpress.org/drazenbebic/" target="_blank" rel="noopener noreferrer">WordPress.org</a>
     </div>
 
-    <div className={styles.footerColumn}>
-      <h4 className={styles.footerTitle}>Affiliates</h4>
+    <div className={ styles.footerColumn }>
+      <h4 className={ styles.footerTitle }>Affiliates</h4>
     </div>
 
   </footer>

@@ -7,7 +7,7 @@ export default () => (
   <nav>
     <div className={ styles.logo }>
       <a href="/">
-        <img src={ logo }/>
+        <img src={ logo } alt="License Manager for WooCommerce"/>
       </a>
     </div>
     <div className={ styles.links }>

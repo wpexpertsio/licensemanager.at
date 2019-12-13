@@ -1,10 +1,45 @@
-import React from "react"
+import React, { Component } from "react"
 import Layout from "../components/layout/layout"
+import { Link, graphql } from "gatsby"
 
-export default () => (
-  <Layout>
-    <div>
-      <h1>Documentation!</h1>
-    </div>
-  </Layout>
-)
+class DocsPage extends Component {
+  render() {
+    const data = this.props.data
+
+    return (
+      <Layout>
+        <div>
+          <h1>Docs</h1>
+          {data.allWordpressWpDocs.edges.map(({ node }) => (
+            <div key={ node.slug }>
+              <Link to={ node.path }>
+                <span>{ node.title }</span>
+              </Link>
+            </div>
+          ))}
+        </div>
+      </Layout>
+    )
+  }
+}
+
+export default DocsPage
+
+export const pageQuery = graphql`
+    query {
+        allWordpressWpDocs(filter: {status: {eq: "publish"}}) {
+            edges {
+                node {
+                    id
+                    wordpress_id
+                    wordpress_parent
+                    title
+                    status
+                    type
+                    slug
+                    path
+                }
+            }
+        }
+    }
+`

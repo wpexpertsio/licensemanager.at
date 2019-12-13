@@ -5,6 +5,9 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: "License Manager for WooCommerce"
+  },
   /* Your site config here */
   plugins: [
     "gatsby-plugin-sass",
@@ -12,6 +15,18 @@ module.exports = {
       resolve: "gatsby-plugin-typography",
       options: {
         pathToConfigModule: "src/utils/typography"
+      }
+    },
+    {
+      resolve: "gatsby-source-wordpress",
+      options: {
+        baseUrl: "www.licensemanager.at",
+        protocol: "https",
+        hostingWPCOM: false,
+        useACF: false,
+        includedRoutes: [
+          "**/docs"
+        ]
       }
     }
   ]
