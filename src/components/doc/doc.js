@@ -9,8 +9,8 @@ class Doc extends Component {
 
     return (
       <Layout>
-        <h1>{doc.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: doc.content }}></div>
+        <h1 dangerouslySetInnerHTML={{ __html: doc.title }} />
+        <div dangerouslySetInnerHTML={{ __html: doc.content }} />
       </Layout>
     )
   }
@@ -27,7 +27,6 @@ export const docQuery = graphql`
     query($id: String!) {
         wordpressWpDocs(id: { eq: $id }) {
             title
-            slug
             content
         }
     }

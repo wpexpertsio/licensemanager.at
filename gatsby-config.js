@@ -20,7 +20,7 @@ module.exports = {
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        baseUrl: "www.licensemanager.at",
+        baseUrl: "cms.licensemanager.at",
         protocol: "https",
         hostingWPCOM: false,
         useACF: false,
