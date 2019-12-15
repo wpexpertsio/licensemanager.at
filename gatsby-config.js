@@ -18,6 +18,22 @@ module.exports = {
       }
     },
     {
+      resolve: "gatsby-plugin-prefetch-google-fonts",
+      options: {
+        fonts: [
+          {
+            family: "Raleway",
+            subsets: ["latin"],
+            variants: ["400", "800"]
+          },
+          {
+            family: "Titillium Web",
+            variants: ["400", "600"]
+          },
+        ],
+      },
+    },
+    {
       resolve: "gatsby-source-wordpress",
       options: {
         baseUrl: "cms.licensemanager.at",
