@@ -21,14 +21,19 @@ class Footer extends Component {
               </form>
             </div>
             <div className="footer-column">
-              <h4 className="footer-title">Social Media</h4>
-              <a className="footer-link" href="https://github.com/drazenbebic" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <br/>
-              <a className="footer-link" href="https://www.linkedin.com/in/drazenbebic/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              <br/>
-              <a className="footer-link" href="https://www.xing.com/profile/Drazen_Bebic/" target="_blank" rel="noopener noreferrer">Xing</a>
-              <br/>
-              <a className="footer-link" href="https://profiles.wordpress.org/drazenbebic/" target="_blank" rel="noopener noreferrer">WordPress.org</a>
+              <h4 className="footer-title">Public Profiles</h4>
+              <a className="footer-link" href="https://github.com/drazenbebic" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <i className="fab fa-github"/>
+              </a>
+              <a className="footer-link" href="https://www.linkedin.com/in/drazenbebic/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <i className="fab fa-linkedin-in"/>
+              </a>
+              <a className="footer-link" href="https://www.xing.com/profile/Drazen_Bebic/" target="_blank" rel="noopener noreferrer" aria-label="Xing">
+                <i className="fab fa-xing"/>
+              </a>
+              <a className="footer-link" href="https://profiles.wordpress.org/drazenbebic/" target="_blank" rel="noopener noreferrer" aria-label="WordPress.org">
+                <i className="fab fa-wordpress"/>
+              </a>
             </div>
             <div className="footer-column">
               <h4 className="footer-title">Built with</h4>

@@ -80,7 +80,7 @@ class Layout extends Component {
           <Navigation/>
           <Header/>
           <div id="inner-content">
-            {this.props.children}
+            { this.props.children }
           </div>
           <Footer/>
         </div>

@@ -12,12 +12,23 @@ footer {
         font-weight: 800;
         margin: 0 0 1em;
         text-transform: uppercase;
-        color: #dd3478;
+        color: #DD3478;
       }
 
       a[class="footer-link"] {
+        font-size: 2em;
+        margin-right: .375em;
         text-decoration: none;
         color: #FFFFFF;
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
+
+        &:hover {
+          color: #DD3478;
+        }
       }
 
       a[class="footer-jetbrains-link"] {
