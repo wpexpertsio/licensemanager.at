@@ -5,7 +5,7 @@ header {
   background-color: #8F1948;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 1em;
+  padding: 1.5em;
 
   div {
     width: 100%;
@@ -16,46 +16,52 @@ header {
       color: #FFFFFF;
       font-weight: 800;
       margin: 0 0 .5em;
-      font-size: 2em;
+      font-size: 1.5em;
       text-shadow: .03em .03em 0 rgba(0,0,0,0.4);
     }
 
     p {
       color: #FFFFFF;
-      font-size: 1em;
       margin: 0;
       text-shadow: .03em .03em 0 rgba(0,0,0,0.4);
     }
   }
 }
 
-/*
-header {
-  display: flex;
-  background-color: #8F1948;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 200px;
+// 576px+
+@media all and (min-width: 576px) {
+  header {
+    padding: 1.75em;
+  }
+}
 
-  div {
-    width: 100%;
-    align-self: center;
-    text-align: center;
+// 768px+
+@media all and (min-width: 768px) {
+}
 
-    h1 {
-      color: #FFFFFF;
-      font-weight: 800;
-      margin: 0;
-      font-size: 48px;
-      text-shadow: .03em .03em 0 rgba(0,0,0,0.4);
-    }
+// 992px+
+@media all and (min-width: 992px) {
+  header {
+    padding: 2em;
 
-    p {
-      color: #FFFFFF;
-      font-size: 20px;
-      margin: 0;
-      text-shadow: .03em .03em 0 rgba(0,0,0,0.4);
+    div {
+      h1 {
+        font-size: 2.5em;
+        margin: 0 0 .25em;
+      }
     }
   }
 }
-*/
+
+// 1200px+
+@media all and (min-width: 1200px) {
+  header {
+    padding: 3.5em;
+
+    div {
+      h1 {
+        font-size: 3em;
+      }
+    }
+  }
+}

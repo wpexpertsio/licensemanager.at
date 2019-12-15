@@ -5,3 +5,8 @@
 html, body {
     background-color: #f8f9fa;
 }
+
+.container {
+    margin: 0 auto;
+    width: 90%;
+}

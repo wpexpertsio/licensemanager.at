@@ -13,7 +13,7 @@ class DocsPage extends Component {
           {data.allWordpressWpDocs.edges.map(({ node }) => (
             <div key={ node.slug }>
               <Link to={ node.path }>
-                <span>{ node.title }</span>
+                <span dangerouslySetInnerHTML={{ __html: node.title }}/>
               </Link>
             </div>
           ))}

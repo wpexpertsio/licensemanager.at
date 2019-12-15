@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import styles from "./layout.module.scss"
+import "./layout.module.scss"
 import Navigation from "../navigation/navigation"
 import Header from "../header/header"
 import Footer from "../footer/footer"
@@ -58,8 +58,10 @@ class Layout extends Component {
   }
 
   render() {
-    return (
-      <>
+    let burgerMenu
+
+    if (window.innerWidth < 768) {
+      burgerMenu = (
         <Menu pageWrapId={ "main-content" } styles={ this.styles }>
           <Link className="menu-item" to="/">Home</Link>
           <Link className="menu-item" to="/about/">About</Link>
@@ -67,11 +69,16 @@ class Layout extends Component {
           <Link className="menu-item" to="/docs/">Docs</Link>
           <Link className="menu-item" to="/donate/">Donate</Link>
         </Menu>
+      )
+    }
 
+    return (
+      <>
+        { burgerMenu }
         <div id="main-content">
           <Navigation/>
           <Header/>
-          <div id={ styles.innerContent }>
+          <div id="inner-content">
             {this.props.children}
           </div>
           <Footer/>
