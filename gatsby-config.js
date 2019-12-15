@@ -28,6 +28,19 @@ module.exports = {
           "**/docs"
         ]
       }
+    },
+    {
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        trackingId: "UA-114996353-2",
+      }
+    },
+    {
+      resolve: "gatsby-plugin-google-adsense",
+      options: {
+        googleAdClientId: "pub-3422791839846480",
+        head: false
+      }
     }
   ]
 }
