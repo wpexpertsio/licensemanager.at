@@ -1,10 +1,42 @@
-import React, { Component } from "react"
+import React from "react"
 import "./footer.module.scss"
 import { Link } from "gatsby"
 import logoPhpStorm from "../../images/footer-logo-phpstorm.png";
 import logoDataGrip from "../../images/footer-logo-datagrip.png";
+import addToMailchimp from "gatsby-plugin-mailchimp/src"
 
-class Footer extends Component {
+export default class Footer extends React.Component {
+  state = {
+    email: "",
+    firstName: "",
+    lastName: ""
+  }
+
+  handleInputChange = e => {
+    const target = e.target
+    const value = target.value
+    const name = target.name
+
+    this.setState({
+      [name]: value,
+    })
+  }
+
+  handleSubmit = e => {
+    e.preventDefault()
+
+    addToMailchimp(this.state.email, {
+      FNAME: this.state.firstName,
+      LNAME: this.state.lastName
+    })
+      .then(data => {
+        alert(data.msg)
+      })
+      .catch(error => {
+        console.error(error)
+      })
+  }
+
   render() {
     return (
       <footer>
@@ -13,10 +45,22 @@ class Footer extends Component {
             <div className="footer-column">
               <h4 className="footer-title">Newsletter</h4>
               <p>Subscribe to the plugin newsletter to always stay up to date. No spam, that's a promise.</p>
-              <form>
-                <input type="text" placeholder="Email (required)"/>
-                <input type="text" placeholder="First name"/>
-                <input type="text" placeholder="Last name"/>
+              <form onSubmit={ this.handleSubmit }>
+                <input type="email"
+                       name="email"
+                       defaultValue={ this.state.email }
+                       onChange={ this.handleInputChange }
+                       placeholder="Email (required)"/>
+                <input type="text"
+                       name="firstName"
+                       defaultValue={ this.state.firstName }
+                       onChange={ this.handleInputChange }
+                       placeholder="First name"/>
+                <input type="text"
+                       name="lastName"
+                       defaultValue={ this.state.lastName }
+                       onChange={ this.handleInputChange }
+                       placeholder="Last name"/>
                 <input type="submit" value="Subscribe"/>
               </form>
             </div>
@@ -69,5 +113,3 @@ class Footer extends Component {
     )
   }
 }
-
-export default Footer

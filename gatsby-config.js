@@ -57,6 +57,12 @@ module.exports = {
         googleAdClientId: "pub-3422791839846480",
         head: false
       }
+    },
+    {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        endpoint: 'https://outlook.us20.list-manage.com/subscribe/post?u=2025f448cb8be50d020af9d6b&amp;id=af1b9242c6',
+      },
     }
   ]
 }
