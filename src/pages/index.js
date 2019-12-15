@@ -2,15 +2,17 @@ import React from "react"
 import Layout from "../components/layout/layout"
 import PrimaryButton from "../components/primary-button/primary-button"
 import Heading from "../components/heading/heading"
+import { Link } from "gatsby"
 
 export default () => (
   <Layout>
     <div className="row">
       <div className="col-3">
-        <PrimaryButton style={{ marginBottom: "1em" }} href="https://downloads.wordpress.org/plugin/license-manager-for-woocommerce.zip">Download</PrimaryButton>
-        <PrimaryButton style={{ marginBottom: "1em" }} to="/docs/">Documentation</PrimaryButton>
-        <PrimaryButton style={{ marginBottom: "1em" }} to="/donate/">Donate</PrimaryButton>
-        <PrimaryButton style={{ marginBottom: "1em" }} to="/contact/">Report a bug</PrimaryButton>
+        <PrimaryButton style={{ marginBottom: "1em" }} href="https://downloads.wordpress.org/plugin/license-manager-for-woocommerce.zip"><i
+          className="fas fa-download"/>Download</PrimaryButton>
+        <PrimaryButton style={{ marginBottom: "1em" }} to="/docs/"><i className="fas fa-book"/>Documentation</PrimaryButton>
+        <PrimaryButton style={{ marginBottom: "1em" }} to="/donate/"><i className="fas fa-donate"/>Donate</PrimaryButton>
+        <PrimaryButton style={{ marginBottom: "1em" }} to="/contact/"><i className="fas fa-bug"/>Report a bug</PrimaryButton>
       </div>
       <div className="col-9">
         <p>The <strong>License Manager for WooCommerce</strong> WordPress/WooCommerce plugin allows you to easily sell
@@ -20,7 +22,7 @@ export default () => (
         <p>The plugin is, and always will be, a 100% free. If you like the plugin please <a
           href="https://wordpress.org/support/plugin/license-manager-for-woocommerce/reviews/#new-post"
           target="_blank" rel="noopener noreferrer">rate it on WordPress.org</a>. You can also support development
-          by <a href="/donate">donating</a>.</p>
+          by <Link to="/donate/">donating</Link>.</p>
       </div>
     </div>
 

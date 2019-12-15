@@ -1,6 +1,6 @@
 .primary-button {
   display: block;
-  font-size: .8em;
+  font-size: .85em;
   text-decoration: none;
   color: #DA4453;
   border: 2px solid #DA4453;
@@ -15,7 +15,13 @@
        -o-transition: all .3s ease 0ms;
           transition: all .3s ease 0ms;
 
+  i {
+    margin-right: .5em;
+  }
+
   &:hover {
-    border-color: transparent;
+    background-color: #DA4453;
+    color: #FFFFFF;
+    //border-color: transparent;
   }
 }

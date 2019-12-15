@@ -14,7 +14,6 @@ class PrimaryButton extends Component {
       button = <a className={ styles.primaryButton } href={ this.props.href } rel="noopener noreferrer" style={ this.props.style }>{ this.props.children }</a>
     }
 
-    console.log(this.props)
     return (
       <>
         { button }

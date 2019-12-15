@@ -56,12 +56,11 @@ class Layout extends Component {
       background: 'rgba(0, 0, 0, 0.3)'
     }
   }
+  burgerMenu
 
-  render() {
-    let burgerMenu
-
-    if (window.innerWidth < 768) {
-      burgerMenu = (
+  componentDidMount() {
+    if (window !== undefined && window.innerWidth < 768) {
+      this.burgerMenu = (
         <Menu pageWrapId={ "main-content" } styles={ this.styles }>
           <Link className="menu-item" to="/">Home</Link>
           <Link className="menu-item" to="/about/">About</Link>
@@ -71,10 +70,12 @@ class Layout extends Component {
         </Menu>
       )
     }
+  }
 
+  render() {
     return (
       <>
-        { burgerMenu }
+        { this.burgerMenu }
         <div id="main-content">
           <Navigation/>
           <Header/>
