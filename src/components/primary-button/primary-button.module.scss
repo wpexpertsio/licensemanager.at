@@ -1,0 +1,21 @@
+.primary-button {
+  display: block;
+  font-size: .8em;
+  text-decoration: none;
+  color: #DA4453;
+  border: 2px solid #DA4453;
+  line-height: 1em;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0.6em 1em;
+  font-weight: 700;
+  -webkit-transition: all .3s ease 0ms;
+     -moz-transition: all .3s ease 0ms;
+      -ms-transition: all .3s ease 0ms;
+       -o-transition: all .3s ease 0ms;
+          transition: all .3s ease 0ms;
+
+  &:hover {
+    border-color: transparent;
+  }
+}

@@ -19,7 +19,7 @@
 // 768px+
 @media all and (min-width: 768px) {
   [id="main-content"] {
-    padding-top: 60px !important;
+    padding-top: 60px;
   }
 }
 
@@ -29,4 +29,7 @@
 
 // 1200px+
 @media all and (min-width: 1200px) {
+  [id="inner-content"] {
+    padding-top: 3em;
+  }
 }
