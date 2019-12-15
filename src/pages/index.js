@@ -3,6 +3,7 @@ import Layout from "../components/layout/layout"
 import PrimaryButton from "../components/primary-button/primary-button"
 import Heading from "../components/heading/heading"
 import { Link } from "gatsby"
+import demoVideo from "../videos/demo.webm"
 
 export default () => (
   <Layout>
@@ -23,6 +24,14 @@ export default () => (
           href="https://wordpress.org/support/plugin/license-manager-for-woocommerce/reviews/#new-post"
           target="_blank" rel="noopener noreferrer">rate it on WordPress.org</a>. You can also support development
           by <Link to="/donate/">donating</Link>.</p>
+      </div>
+    </div>
+
+    <div className="row">
+      <div className="col-12">
+        <video controls="" autoPlay={ true } muted={ true }>
+          <source type="video/webm" src={ demoVideo } />
+        </video>
       </div>
     </div>
 
