@@ -1,8 +1,8 @@
-import React, { Component } from "react"
+import React from "react"
 import styles from "./primary-button.module.scss"
 import { Link } from "gatsby"
 
-class PrimaryButton extends Component {
+class PrimaryButton extends React.Component {
   render() {
     let button
 

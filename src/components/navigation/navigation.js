@@ -1,9 +1,9 @@
-import React, { Component } from "react"
+import React from "react"
 import "./navigation.module.scss"
 import logo from "../../images/logo_horizontal.png"
 import { Link } from "gatsby"
 
-class Navigation extends Component {
+class Navigation extends React.Component {
   render() {
     return (
       <>

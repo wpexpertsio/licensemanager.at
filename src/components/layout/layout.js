@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import "./layout.module.scss"
 import Navigation from "../navigation/navigation"
 import Header from "../header/header"
@@ -6,7 +6,7 @@ import Footer from "../footer/footer"
 import { Link } from "gatsby"
 import { push as Menu } from "react-burger-menu"
 
-class Layout extends Component {
+class Layout extends React.Component {
   styles = {
     bmBurgerButton: {
       position: 'absolute',

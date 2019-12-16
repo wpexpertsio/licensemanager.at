@@ -1,8 +1,8 @@
-import React, { Component } from "react"
+import React from "react"
 import "./header.module.scss"
 import logo from "../../images/docs_header.png"
 
-class Header extends Component {
+class Header extends React.Component {
   render() {
     return (
       <header style={{ backgroundImage: `url(${logo})` }}>

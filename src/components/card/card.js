@@ -1,7 +1,7 @@
-import React, { Component } from "react"
+import React from "react"
 import "./card.module.scss"
 
-class Card extends Component {
+class Card extends React.Component {
   render() {
     return (
       <>

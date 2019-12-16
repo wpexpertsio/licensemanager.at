@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import logoPhpStorm from "../../images/footer-logo-phpstorm.png";
 import logoDataGrip from "../../images/footer-logo-datagrip.png";
 import addToMailchimp from "gatsby-plugin-mailchimp/src"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 export default class Footer extends React.Component {
   state = {
@@ -66,27 +67,27 @@ export default class Footer extends React.Component {
             </div>
             <div className="footer-column">
               <h4 className="footer-title">Public Profiles</h4>
-              <a className="footer-link" href="https://github.com/drazenbebic" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <OutboundLink className="footer-link" href="https://github.com/drazenbebic" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <i className="fab fa-github"/>
-              </a>
-              <a className="footer-link" href="https://www.linkedin.com/in/drazenbebic/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              </OutboundLink>
+              <OutboundLink className="footer-link" href="https://www.linkedin.com/in/drazenbebic/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <i className="fab fa-linkedin-in"/>
-              </a>
-              <a className="footer-link" href="https://www.xing.com/profile/Drazen_Bebic/" target="_blank" rel="noopener noreferrer" aria-label="Xing">
+              </OutboundLink>
+              <OutboundLink className="footer-link" href="https://www.xing.com/profile/Drazen_Bebic/" target="_blank" rel="noopener noreferrer" aria-label="Xing">
                 <i className="fab fa-xing"/>
-              </a>
-              <a className="footer-link" href="https://profiles.wordpress.org/drazenbebic/" target="_blank" rel="noopener noreferrer" aria-label="WordPress.org">
+              </OutboundLink>
+              <OutboundLink className="footer-link" href="https://profiles.wordpress.org/drazenbebic/" target="_blank" rel="noopener noreferrer" aria-label="WordPress.org">
                 <i className="fab fa-wordpress"/>
-              </a>
+              </OutboundLink>
             </div>
             <div className="footer-column">
               <h4 className="footer-title">Built with</h4>
-              <a className="footer-jetbrains-link" href="https://www.jetbrains.com/?from=license-manager-for-woocommerce" target="_blank" rel="noopener noreferrer">
+              <OutboundLink className="footer-jetbrains-link" href="https://www.jetbrains.com/?from=license-manager-for-woocommerce" target="_blank" rel="noopener noreferrer">
                 <img src={ logoPhpStorm } alt="PhpStorm"/>
-              </a>
-              <a className="footer-jetbrains-link" href="https://www.jetbrains.com/?from=license-manager-for-woocommerce" target="_blank" rel="noopener noreferrer">
+              </OutboundLink>
+              <OutboundLink className="footer-jetbrains-link" href="https://www.jetbrains.com/?from=license-manager-for-woocommerce" target="_blank" rel="noopener noreferrer">
                 <img src={ logoDataGrip } alt="DataGrip"/>
-              </a>
+              </OutboundLink>
             </div>
           </div>
         </div>

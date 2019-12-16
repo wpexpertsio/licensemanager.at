@@ -1,0 +1,32 @@
+// 0px+
+
+// 576px+
+@media all and (min-width: 576px) {
+}
+
+// 768px+
+@media all and (min-width: 768px) {
+}
+
+// 992px+
+@media all and (min-width: 992px) {
+  div[class="doc"] {
+    display: flex;
+    width: 100%;
+    margin-bottom: 3em;
+
+    div[class="doc-content"] {
+      width: 75%;
+
+      div[class="doc-breadcrumbs"] {
+        padding: 0 0 1em;
+        margin: 0 0 1em;
+        border-bottom: 1px solid rgba(0,0,0,.1);
+      }
+    }
+  }
+}
+
+// 1200px+
+@media all and (min-width: 1200px) {
+}
