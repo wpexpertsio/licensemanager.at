@@ -51,17 +51,20 @@ export default class Footer extends React.Component {
                        name="email"
                        defaultValue={ this.state.email }
                        onChange={ this.handleInputChange }
-                       placeholder="Email (required)"/>
+                       placeholder="Email (required)"
+                       aria-label="Email (required)"/>
                 <input type="text"
                        name="firstName"
                        defaultValue={ this.state.firstName }
                        onChange={ this.handleInputChange }
-                       placeholder="First name"/>
+                       placeholder="First name"
+                       aria-label="First name"/>
                 <input type="text"
                        name="lastName"
                        defaultValue={ this.state.lastName }
                        onChange={ this.handleInputChange }
-                       placeholder="Last name"/>
+                       placeholder="Last name"
+                       aria-label="Last name"/>
                 <input type="submit" value="Subscribe"/>
               </form>
             </div>

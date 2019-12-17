@@ -5,6 +5,7 @@ import PropTypes from "prop-types"
 import Layout from "../layout/layout"
 import DocSidebar from "../doc-sidebar/doc-sidebar"
 import { Link } from "gatsby"
+import SEO from "../seo"
 
 class Doc extends React.Component {
   breadcrumbs
@@ -65,6 +66,7 @@ class Doc extends React.Component {
 
     return (
       <Layout>
+        <SEO title={ doc.title } description="Easily sell and manage your licenses through WooCommerce" />
         <div className="doc">
           <DocSidebar parentData={ this.props }/>
           <div className="doc-content">

@@ -2,11 +2,14 @@ import React, { Component } from "react"
 import Layout from "../components/layout/layout"
 import { Link } from "gatsby"
 import DocList from "../components/doc-list/doc-list"
+import SEO from "../components/seo"
 
 class Docs extends Component {
   render() {
     return (
       <Layout>
+        <SEO title="Docs" description="Easily sell and manage your licenses through WooCommerce" />
+
         <div className="row">
           <div className="col-12">
             <h2>Getting started</h2>

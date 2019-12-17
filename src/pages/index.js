@@ -5,9 +5,11 @@ import Heading from "../components/heading/heading"
 import Card from "../components/card/card"
 import { Link } from "gatsby"
 import demoVideo from "../videos/demo.webm"
+import SEO from "../components/seo"
 
 export default () => (
   <Layout>
+    <SEO title="Home" description="Easily sell and manage your licenses through WooCommerce" />
     <div className="row">
       <div className="col-3">
         <PrimaryButton style={{ marginBottom: "1em" }} href="https://downloads.wordpress.org/plugin/license-manager-for-woocommerce.zip"><i
