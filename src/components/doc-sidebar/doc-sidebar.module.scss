@@ -54,15 +54,21 @@ div[class="doc-sidebar"] {
           }
         }
 
-        &:has(a[class="active"]) {
+        &[class="active"] {
+          > a {
+            font-weight: 800;
+            background-color: #8F1948;
+            color: #FFF;
+          }
+
           ul {
             display: block;
-            background-color: red;
           }
         }
 
         // Second level <ul>
         > ul {
+          display: none;
           list-style: none;
           margin: 1em 0 1em 1em;
           border-left: 1px solid rgba(0,0,0,.1);

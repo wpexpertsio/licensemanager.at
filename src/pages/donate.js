@@ -7,7 +7,7 @@ export default () => (
   <Layout>
     <div className="row">
       <div className="col-12">
-        <Heading style={{ marginTop: 0 }}>Thank you for your support!</Heading>
+        <Heading>Thank you for your support!</Heading>
       </div>
       <div className="col-12">
         <p>The License Manager for WooCommerce is and will remain a 100% free plugin. If you however wish to help with

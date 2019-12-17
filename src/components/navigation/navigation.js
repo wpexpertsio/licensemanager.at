@@ -18,7 +18,7 @@ class Navigation extends React.Component {
             <div className="links">
               <ul>
                 <li><Link activeClassName="active" to="/">Home</Link></li>
-                <li><Link activeClassName="active" to="/about/">About</Link></li>
+                <li><Link activeClassName="active" to="/blog/">Blog</Link></li>
                 <li><Link activeClassName="active" to="/contact/">Contact</Link></li>
                 <li><Link activeClassName="active" to="/docs/">Docs</Link></li>
                 <li><Link activeClassName="active" to="/donate/">Donate</Link></li>

@@ -41,10 +41,6 @@ class Doc extends React.Component {
     this.setBreadcrumbs(pathname)
   }
 
-  componentDidMount() {
-    //console.log(this.props.data)
-  }
-
   render() {
     this.initComponent()
 
