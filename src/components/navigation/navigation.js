@@ -17,11 +17,11 @@ class Navigation extends React.Component {
 
             <div className="links">
               <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/about/">About</Link></li>
-                <li><Link to="/contact/">Contact</Link></li>
-                <li><Link to="/docs/">Docs</Link></li>
-                <li><Link to="/donate/">Donate</Link></li>
+                <li><Link activeClassName="active" to="/">Home</Link></li>
+                <li><Link activeClassName="active" to="/about/">About</Link></li>
+                <li><Link activeClassName="active" to="/contact/">Contact</Link></li>
+                <li><Link activeClassName="active" to="/docs/">Docs</Link></li>
+                <li><Link activeClassName="active" to="/donate/">Donate</Link></li>
               </ul>
             </div>
 

@@ -84,7 +84,7 @@ footer {
           font-size: .8em;
           color: #BBBBBB;
 
-          &[aria-current="page"] {
+          &[class="active"] {
             color: #DD3478;
           }
         }

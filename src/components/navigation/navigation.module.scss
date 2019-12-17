@@ -84,7 +84,7 @@ nav {
               -o-transition: color .3s ease-in;
               transition: color .3s ease-in;
 
-              &[aria-current="page"] {
+              &[class="active"] {
                 color: #DD3478;
                 font-weight: 600;
               }

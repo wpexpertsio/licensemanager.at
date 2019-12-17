@@ -35,18 +35,37 @@ class Doc extends React.Component {
     this.breadcrumbs = breadcrumbs
   }
 
-  componentWillMount() {
+  initComponent() {
     const pathname = this.props.location.pathname
 
     this.setBreadcrumbs(pathname)
   }
 
   componentDidMount() {
-    console.log(this.props.data)
+    //console.log(this.props.data)
   }
 
   render() {
-    const doc = this.props.data.wordpressWpDocs
+    this.initComponent()
+
+    let articles = [];
+    const doc = this.props.data.current
+
+    if (this.props.data.children.edges.length > 0) {
+      articles.push(
+        <>
+          <h3>Articles</h3>
+        </>
+      )
+
+      this.props.data.children.edges.forEach(child => {
+        articles.push(
+          <>
+            <div key={ child.node.path }><Link to={ child.node.path }>{ child.node.title }</Link></div>
+          </>
+        )
+      })
+    }
 
     return (
       <Layout>
@@ -56,8 +75,19 @@ class Doc extends React.Component {
             <div className="doc-breadcrumbs">
               { this.breadcrumbs }
             </div>
-            <h1 dangerouslySetInnerHTML={{ __html: doc.title }} />
-            <div dangerouslySetInnerHTML={{ __html: doc.content }} />
+            <h1 className="doc-title" dangerouslySetInnerHTML={{ __html: doc.title }} />
+            <div className="doc-body" dangerouslySetInnerHTML={{ __html: doc.content }} />
+            <div className="doc-articles">
+              { articles }
+            </div>
+            <div className="doc-footer">
+              <div className="doc-still-stuck">
+                <i className="fas fa-envelope"/> Still stuck? <Link to="/contact/">How can we help?</Link>
+              </div>
+              <div className="doc-updated-at">
+                <i>Updated on { doc.modified }</i>
+              </div>
+            </div>
           </div>
         </div>
       </Layout>
@@ -73,10 +103,22 @@ Doc.propTypes = {
 export default Doc
 
 export const docQuery = graphql`
-    query($id: String!) {
-        wordpressWpDocs(id: { eq: $id }) {
+    query($wordpress_id: Int!) {
+        current: wordpressWpDocs(wordpress_id: { eq: $wordpress_id }) {
             title
             content
+            modified(formatString: "D.M.Y")
+        },
+        children: allWordpressWpDocs(filter: {wordpress_parent: {eq: $wordpress_id}}, sort: {fields: menu_order, order: ASC}) {
+            edges {
+                node {
+                    title
+                    slug
+                    path
+                    menu_order
+                    wordpress_id
+                }
+            }
         }
     }
 `

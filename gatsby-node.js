@@ -11,6 +11,8 @@ exports.createPages = async ({ graphql, actions }) => {
         edges {
           node {
             id
+            wordpress_id
+            wordpress_parent
             path
           }
         }
@@ -30,6 +32,8 @@ exports.createPages = async ({ graphql, actions }) => {
       // as a GraphQL variable to query for this posts's data.
       context: {
         id: edge.node.id,
+        wordpress_id: edge.node.wordpress_id,
+        wordpress_parent: edge.node.wordpress_parent
       },
     })
   })

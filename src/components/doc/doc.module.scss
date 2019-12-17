@@ -1,7 +1,87 @@
 // 0px+
+div[class="doc"] {
+
+  div[class="doc-content"] {
+
+    div[class="doc-breadcrumbs"] {
+      margin: 1.5em 0;
+    }
+
+    h1[class="doc-title"] {
+
+    }
+
+    div[class="doc-body"] {
+      span[class="request-type"] {
+      }
+
+      pre[class^="language-"] {
+        position: relative;
+        font-size: .8em !important;
+      }
+    }
+
+    div[class="doc-articles"] {
+      div {
+      }
+    }
+
+    div[class="doc-footer"] {
+      margin: 3em 0 2em;
+      text-align: center;
+
+      div[class="doc-still-stuck"] {
+
+      }
+
+      div[class="doc-updated-at"] {
+
+      }
+    }
+  }
+}
 
 // 576px+
 @media all and (min-width: 576px) {
+  div[class="doc"] {
+
+    div[class="doc-content"] {
+
+      div[class="doc-breadcrumbs"] {
+      }
+
+      h1[class="doc-title"] {
+
+      }
+
+      div[class="doc-body"] {
+        span[class="request-type"] {
+        }
+
+        pre[class^="language-"] {
+        }
+      }
+
+      div[class="doc-articles"] {
+        div {
+        }
+      }
+
+      div[class="doc-footer"] {
+        display: flex;
+        margin-top: 3em;
+        justify-content: space-between;
+
+        div[class="doc-still-stuck"] {
+
+        }
+
+        div[class="doc-updated-at"] {
+
+        }
+      }
+    }
+  }
 }
 
 // 768px+
@@ -22,6 +102,44 @@
         padding: 0 0 1em;
         margin: 0 0 1em;
         border-bottom: 1px solid rgba(0,0,0,.1);
+      }
+
+      h1[class="doc-title"] {
+        font-size: 2.5em;
+
+        &:after {
+          content: "";
+          display: block;
+          width: 100px;
+          height: 3px;
+          background-color: #8F1948;
+          margin-top: .25em;
+        }
+      }
+
+      div[class="doc-body"] {
+        span[class="request-type"] {
+          display: block;
+          background-color: red;
+        }
+      }
+
+      div[class="doc-articles"] {
+          div {
+            margin-bottom: 0;
+          }
+      }
+
+      div[class="doc-footer"] {
+        margin-bottom: 0;
+
+        div[class="doc-still-stuck"] {
+
+        }
+
+        div[class="doc-updated-at"] {
+
+        }
       }
     }
   }

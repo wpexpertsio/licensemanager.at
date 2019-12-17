@@ -31,7 +31,7 @@ class Docs extends Component {
 
           <div className="col-4">
             <DocList>
-              <h3>Tutorials & How-To</h3>
+              <h3><Link to="/docs/tutorials-how-to/">Tutorials & How-To</Link></h3>
               <ul>
                 <li><i className="fas fa-folder"/> <Link to="/docs/tutorials-how-to/additional-rest-api-validation/">Additional REST API Validation</Link></li>
                 <li><i className="fas fa-folder"/> <Link to="/docs/tutorials-how-to/modifying-the-rest-api-response/">Modifying the REST API Response</Link></li>
@@ -50,7 +50,7 @@ class Docs extends Component {
         <div className="row">
           <div className="col-4">
             <DocList>
-              <h3>REST API</h3>
+              <h3><Link to="/docs/rest-api/">REST API</Link></h3>
               <ul>
                 <li><i className="fas fa-folder"/> <Link to="/docs/rest-api/requirements/">Requirements</Link></li>
                 <li><i className="fas fa-folder"/> <Link to="/docs/rest-api/generate-api-keys/">Generate API keys</Link></li>
@@ -63,7 +63,7 @@ class Docs extends Component {
 
           <div className="col-4">
             <DocList>
-              <h3>Internal API docs</h3>
+              <h3><Link to="/docs/internal-api-docs/">Internal API docs</Link></h3>
               <ul>
                 <li><i className="fas fa-folder"/> <Link to="/docs/internal-api-docs/database-structure/">Database Structure</Link></li>
                 <li><i className="fas fa-folder"/> <Link to="/docs/internal-api-docs/filters-reference/">Filters Reference</Link></li>
@@ -75,7 +75,7 @@ class Docs extends Component {
 
           <div className="col-4">
             <DocList>
-              <h3>Codex</h3>
+              <h3><Link to="/docs/codex/">Codex</Link></h3>
               <ul>
                 <li><i className="fas fa-folder"/> <Link to="/docs/codex/theming/">Theming</Link></li>
               </ul>
