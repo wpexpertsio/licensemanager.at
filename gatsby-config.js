@@ -34,6 +34,7 @@ module.exports = {
             variants: [`400`, `600`]
           },
         ],
+        fontDisplay: `swap`
       },
     },
     {

@@ -61,11 +61,11 @@ export default class DocSidebar extends React.Component {
               <li key="/docs/handbook/installation/" className={ sections["handbook"]["installation"] }>
                 <Link activeClassName="active" to="/docs/handbook/installation/">Installation</Link>
                 <ul>
-                  <li key="/docs/handbook/installation/manual-installation/">
-                    <Link activeClassName="active" to="/docs/handbook/installation/manual-installation/">Manual installation</Link>
-                  </li>
                   <li key="/docs/handbook/installation/wordpress-dashboard/">
                     <Link activeClassName="active" to="/docs/handbook/installation/wordpress-dashboard/">WordPress Dashboard</Link>
+                  </li>
+                  <li key="/docs/handbook/installation/manual-installation/">
+                    <Link activeClassName="active" to="/docs/handbook/installation/manual-installation/">Manual installation</Link>
                   </li>
                 </ul>
               </li>
