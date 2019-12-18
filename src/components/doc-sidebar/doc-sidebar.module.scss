@@ -1,9 +1,67 @@
 div[class="doc-sidebar"] {
-  ul {
-    margin: 0 0 0 1.5em;
+  // First level <ul>
+  > ul {
+    list-style: none;
+    margin: 0;
 
-    li {
+    > li {
+      margin: 0;
 
+      > a {
+        font-size: .9em;
+        padding: .5em 1.235em;
+        display: block;
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
+
+        &[class="active"] {
+          font-weight: 800;
+          background-color: #8F1948;
+          color: #FFF;
+        }
+      }
+
+      &[class="active"] {
+        > a {
+          font-weight: 800;
+          background-color: #8F1948;
+          color: #FFF;
+        }
+
+        ul {
+          display: block;
+        }
+      }
+
+      // Second level <ul>
+      > ul {
+        display: none;
+        list-style: none;
+        margin: 1em 0 1em 1em;
+        border-left: 1px solid rgba(0,0,0,.1);
+
+        > li {
+          > a {
+            color: #333333;
+            font-size: .9em;
+            padding: .5em 1.235em;
+            display: block;
+            -webkit-transition: all .3s ease;
+            -moz-transition: all .3s ease;
+            -ms-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease;
+
+            &[class="active"] {
+              border-left: 2px solid #8F1948;
+              font-weight: 800;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -22,78 +80,6 @@ div[class="doc-sidebar"] {
     width: 25%;
     border-right: 1px solid rgba(0,0,0,.1);
     padding-right: 1.5em;
-    margin-right: 1.5em;
-
-    h2 {
-      border-bottom: 1px solid rgba(0,0,0,.1);
-      padding-bottom: .65em;
-    }
-
-    // First level <ul>
-    > ul {
-      list-style: none;
-      margin: 0;
-
-      > li {
-        margin: 0;
-
-        > a {
-          font-size: .9em;
-          padding: .5em 1.235em;
-          display: block;
-          -webkit-transition: all .3s ease;
-             -moz-transition: all .3s ease;
-              -ms-transition: all .3s ease;
-               -o-transition: all .3s ease;
-                  transition: all .3s ease;
-
-          &[class="active"] {
-            font-weight: 800;
-            background-color: #8F1948;
-            color: #FFF;
-          }
-        }
-
-        &[class="active"] {
-          > a {
-            font-weight: 800;
-            background-color: #8F1948;
-            color: #FFF;
-          }
-
-          ul {
-            display: block;
-          }
-        }
-
-        // Second level <ul>
-        > ul {
-          display: none;
-          list-style: none;
-          margin: 1em 0 1em 1em;
-          border-left: 1px solid rgba(0,0,0,.1);
-
-          > li {
-            > a {
-              color: #333333;
-              font-size: .9em;
-              padding: .5em 1.235em;
-              display: block;
-              -webkit-transition: all .3s ease;
-                 -moz-transition: all .3s ease;
-                  -ms-transition: all .3s ease;
-                   -o-transition: all .3s ease;
-                      transition: all .3s ease;
-
-              &[class="active"] {
-                border-left: 2px solid #8F1948;
-                font-weight: 800;
-              }
-            }
-          }
-        }
-      }
-    }
   }
 }
 

@@ -20,7 +20,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  const docTemplate = path.resolve(`./src/components/doc/doc.js`)
+  const docTemplate = path.resolve(`./src/templates/doc/doc.js`)
 
   result.data.allWordpressWpDocs.edges.forEach(edge => {
     createPage({
