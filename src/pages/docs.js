@@ -84,7 +84,6 @@ class Docs extends Component {
               </ul>
             </DocList>
 
-
           </div>
         </div>
 

@@ -46,12 +46,26 @@ footer {
           display: block;
           width: 100%;
           height: calc(1.5em + .75rem + 2px);
-          padding: .375rem .75rem;
-          background-color: rgba(255,255,255,.2);
+          font-size: .85em;
+          font-weight: 700;
+          text-transform: uppercase;
+          padding: 0.6em 1em;
+          background-color: #202227;
           background-clip: padding-box;
           color: #FFFFFF;
-          border: 1px solid #000000;
+          border: 2px solid transparent;
           margin-bottom: 1em;
+          line-height: 1em;
+          -webkit-transition: .3s all ease;
+             -moz-transition: .3s all ease;
+              -ms-transition: .3s all ease;
+               -o-transition: .3s all ease;
+                  transition: .3s all ease;
+
+          &:focus {
+            border-color: #DD3478;
+            outline: none;
+          }
         }
 
         input[type="submit"] {
@@ -59,15 +73,8 @@ footer {
           background-color: transparent;
           border: 2px solid #DD3478;
           color: #DD3478;
-          text-transform: uppercase;
-          font-size: .85em;
           line-height: 1em;
           margin-bottom: 0;
-          -webkit-transition: .3s all ease;
-          -moz-transition: .3s all ease;
-          -ms-transition: .3s all ease;
-          -o-transition: .3s all ease;
-          transition: .3s all ease;
 
           &:hover {
             background-color: #DD3478;
