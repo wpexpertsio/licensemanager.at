@@ -33,7 +33,11 @@ div[class="doc"] {
       }
 
       p[class="param-name"] {
-        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+
+      p[class="param-desc"] {
+        padding-left: 1em;
       }
     }
 
