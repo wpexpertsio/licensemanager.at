@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout/layout"
 import Heading from "../components/heading/heading"
-import payPalLogo from "../images/de-pp-logo-200px.png"
+import payPalLogo from "../images/logo-paypal.webp"
 import SEO from "../components/seo"
 
 export default () => (

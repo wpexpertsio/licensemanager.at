@@ -1,8 +1,8 @@
 import React from "react"
 import "./footer.module.scss"
 import { Link } from "gatsby"
-import logoPhpStorm from "../../images/footer-logo-phpstorm.png";
-import logoDataGrip from "../../images/footer-logo-datagrip.png";
+import logoPhpStorm from "../../images/footer-logo-phpstorm.webp";
+import logoDataGrip from "../../images/footer-logo-datagrip.webp";
 import addToMailchimp from "gatsby-plugin-mailchimp/src"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 

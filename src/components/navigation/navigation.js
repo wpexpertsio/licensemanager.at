@@ -1,6 +1,6 @@
 import React from "react"
 import "./navigation.module.scss"
-import logo from "../../images/logo_horizontal.png"
+import logo from "../../images/logo_horizontal.webp"
 import { Link } from "gatsby"
 
 class Navigation extends React.Component {

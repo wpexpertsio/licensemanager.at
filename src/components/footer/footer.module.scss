@@ -56,9 +56,23 @@ footer {
 
         input[type="submit"] {
           cursor: pointer;
-          border-color: #8F1948;
-          background-color: #8F1948;
+          background-color: transparent;
+          border: 2px solid #DD3478;
+          color: #DD3478;
+          text-transform: uppercase;
+          font-size: .85em;
+          line-height: 1em;
           margin-bottom: 0;
+          -webkit-transition: .3s all ease;
+          -moz-transition: .3s all ease;
+          -ms-transition: .3s all ease;
+          -o-transition: .3s all ease;
+          transition: .3s all ease;
+
+          &:hover {
+            background-color: #DD3478;
+            color: #FFFFFF;
+          }
         }
       }
     }

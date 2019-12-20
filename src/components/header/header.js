@@ -1,6 +1,6 @@
 import React from "react"
 import "./header.module.scss"
-import logo from "../../images/docs_header.png"
+import logo from "../../images/docs_header.webp"
 
 class Header extends React.Component {
   render() {
