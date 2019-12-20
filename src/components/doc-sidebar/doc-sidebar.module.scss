@@ -12,15 +12,15 @@ div[class="doc-sidebar"] {
         padding: .5em 1.235em;
         display: block;
         -webkit-transition: all .3s ease;
-        -moz-transition: all .3s ease;
-        -ms-transition: all .3s ease;
-        -o-transition: all .3s ease;
-        transition: all .3s ease;
+           -moz-transition: all .3s ease;
+            -ms-transition: all .3s ease;
+             -o-transition: all .3s ease;
+                transition: all .3s ease;
 
         &[class="active"] {
           font-weight: 800;
           background-color: #8F1948;
-          color: #FFF;
+          color: #FFFFFF;
         }
       }
 
@@ -28,17 +28,12 @@ div[class="doc-sidebar"] {
         > a {
           font-weight: 800;
           background-color: #8F1948;
-          color: #FFF;
-        }
-
-        ul {
-          display: block;
+          color: #FFFFFF;
         }
       }
 
       // Second level <ul>
       > ul {
-        display: none;
         list-style: none;
         margin: 1em 0 1em 1em;
         border-left: 1px solid rgba(0,0,0,.1);
@@ -50,10 +45,10 @@ div[class="doc-sidebar"] {
             padding: .5em 1.235em;
             display: block;
             -webkit-transition: all .3s ease;
-            -moz-transition: all .3s ease;
-            -ms-transition: all .3s ease;
-            -o-transition: all .3s ease;
-            transition: all .3s ease;
+               -moz-transition: all .3s ease;
+                -ms-transition: all .3s ease;
+                 -o-transition: all .3s ease;
+                    transition: all .3s ease;
 
             &[class="active"] {
               border-left: 2px solid #8F1948;
@@ -72,15 +67,15 @@ div[class="doc-sidebar"] {
 
 // 768px+
 @media all and (min-width: 768px) {
-}
-
-// 992px+
-@media all and (min-width: 992px) {
   div[class="doc-sidebar"] {
     width: 25%;
     border-right: 1px solid rgba(0,0,0,.1);
     padding-right: 1.5em;
   }
+}
+
+// 992px+
+@media all and (min-width: 992px) {
 }
 
 // 1200px+

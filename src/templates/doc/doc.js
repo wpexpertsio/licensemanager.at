@@ -14,18 +14,10 @@ class Doc extends React.Component {
     const doc = this.props.data.current
 
     if (this.props.data.children.edges.length > 0) {
-      articles.push(
-        <>
-          <h3>Articles</h3>
-        </>
-      )
+      articles.push(<h3 key="h3-articles">Articles</h3>)
 
       this.props.data.children.edges.forEach(child => {
-        articles.push(
-          <>
-            <div key={ child.node.path }><Link to={ child.node.path }>{ child.node.title }</Link></div>
-          </>
-        )
+        articles.push(<div key={ child.node.path }><Link to={ child.node.path } dangerouslySetInnerHTML={{ __html: child.node.title }}/></div>)
       })
     }
 
@@ -66,13 +58,17 @@ Doc.propTypes = {
 export default Doc
 
 export const docQuery = graphql`
-    query($wordpress_id: Int!) {
+    query($wordpress_id: Int!, $wordpress_parent: Int!) {
         current: wordpressWpDocs(wordpress_id: { eq: $wordpress_id }) {
             title
             content
             modified(formatString: "D.M.Y")
+            slug
+            path
+            wordpress_id
+            wordpress_parent
         },
-        children: allWordpressWpDocs(filter: {wordpress_parent: {eq: $wordpress_id}}, sort: {fields: menu_order, order: ASC}) {
+        children: allWordpressWpDocs(filter: { wordpress_parent: { eq: $wordpress_id } }, sort: { fields: menu_order, order: ASC }) {
             edges {
                 node {
                     title
@@ -80,6 +76,19 @@ export const docQuery = graphql`
                     path
                     menu_order
                     wordpress_id
+                    wordpress_parent
+                }
+            }
+        },
+        siblings: allWordpressWpDocs(filter: { wordpress_parent: { eq: $wordpress_parent } }, sort: { fields: menu_order, order: ASC }) {
+            edges {
+                node {
+                    title
+                    slug
+                    path
+                    menu_order
+                    wordpress_id
+                    wordpress_parent
                 }
             }
         }

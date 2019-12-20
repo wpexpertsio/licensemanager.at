@@ -9,6 +9,11 @@ class Breadcrumbs extends React.Component {
       return "Tutorials & How-To"
     }
 
+    // Strings which contain underlines
+    if (route.indexOf("_") !== -1) {
+      return route
+    }
+
     // Strings which contain no dashes
     if (route.indexOf("-") === -1) {
       return route.charAt(0).toUpperCase() + route.slice(1)
@@ -28,7 +33,6 @@ class Breadcrumbs extends React.Component {
         result += slugPiece.charAt(0).toUpperCase() + slugPiece.slice(1)
         result += " "
       })
-
       return result
     }
   }
@@ -40,18 +44,15 @@ class Breadcrumbs extends React.Component {
     let url = ""
 
     breadcrumbs.push(
-      <>
+      <span key="crumb-home" className="crumb">
         <Link to="/"><i className="fas fa-home"/> Home</Link>
-      </>
+      </span>
     )
 
     urlParams.forEach(param => {
       if (param !== "") {
         breadcrumbs.push(
-          <>
-            {/*&nbsp;|&nbsp;<Link to={"/" + url + param + "/"}>{ param.charAt(0).toUpperCase() + param.slice(1) }</Link>*/}
-            &nbsp;|&nbsp;<Link to={"/" + url + param + "/"}>{ this.getRouteName(param) }</Link>
-          </>
+            <span key={ "crumb-" + url + param } className="crumb">&nbsp;|&nbsp; <Link to={"/" + url + param + "/"}>{ this.getRouteName(param) }</Link></span>
         )
         url += param + "/"
       }
