@@ -11,15 +11,19 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        {/*
+        <link rel="preconnect" href="https://pixel.rubiconproject.com"/>
+        <link rel="preconnect" href="https://adservice.google.com"/>
+        <link rel="preconnect" href="https://adservice.google.at"/>
+        <link rel="preconnect" href="https://tpc.googlesyndication.com"/>
+        <link rel="preconnect" href="https://token.rubiconproject.com"/>
+        <link rel="preconnect" href="https://cm.g.doubleclick.net"/>
         <script data-ad-client="ca-pub-3422791839846480" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"/>
-        */}
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
         <noscript key="noscript" id="gatsby-noscript">
-          This app works best with JavaScript enabled.
+          This website works best with JavaScript enabled.
         </noscript>
         <div
           key={`body`}

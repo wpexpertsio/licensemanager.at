@@ -10,9 +10,11 @@ class Layout extends React.Component {
       <div id="main-content">
         <Navigation/>
         <Header/>
-        <div id="inner-content">
+        <div className="google-ad"/>
+        <section id="inner-content">
           { this.props.children }
-        </div>
+        </section>
+        <div className="google-ad"/>
         <Footer/>
       </div>
     )

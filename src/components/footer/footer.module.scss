@@ -1,6 +1,7 @@
 // 0px+
 footer {
   padding-top: 2em;
+  border-top: 20px solid #DD3478;
   background-color: #07090f;
   color: rgba(255,255,255,0.5);
 
@@ -170,6 +171,7 @@ footer {
 // 1200px+
 @media all and (min-width: 1200px) {
   footer {
+    border-top-width: 40px;
     padding-top: 4em;
 
     div[class="footer-columns"] {
