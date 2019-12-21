@@ -1,11 +1,52 @@
 import React, { Component } from "react"
 import Layout from "../components/layout/layout"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import DocList from "../components/doc-list/doc-list"
 import SEO from "../components/seo"
 
 class Docs extends Component {
   render() {
+    const children = this.props.data.children.edges
+    let articlesHandbook = []
+    let articlesTutorialsAndHowTo = []
+    let articlesRestApi = []
+    let articlesInternalApiDocs = []
+    let articlesCodex = []
+
+    children.forEach(edge => {
+      let doc = edge.node
+
+      if (doc.wordpress_parent === 7) {
+        articlesHandbook.push(
+          <li key={ doc.id }><i className="fas fa-folder"/> <Link to={ doc.path } dangerouslySetInnerHTML={{ __html: doc.title }}/></li>
+        )
+      }
+
+      if (doc.wordpress_parent === 8) {
+        articlesTutorialsAndHowTo.push(
+          <li key={ doc.id }><i className="fas fa-folder"/> <Link to={ doc.path } dangerouslySetInnerHTML={{ __html: doc.title }}/></li>
+        )
+      }
+
+      if (doc.wordpress_parent === 9) {
+        articlesRestApi.push(
+          <li key={ doc.id }><i className="fas fa-folder"/> <Link to={ doc.path } dangerouslySetInnerHTML={{ __html: doc.title }}/></li>
+        )
+      }
+
+      if (doc.wordpress_parent === 10) {
+        articlesInternalApiDocs.push(
+          <li key={ doc.id }><i className="fas fa-folder"/> <Link to={ doc.path } dangerouslySetInnerHTML={{ __html: doc.title }}/></li>
+        )
+      }
+
+      if (doc.wordpress_parent === 11) {
+        articlesCodex.push(
+          <li key={ doc.id }><i className="fas fa-folder"/> <Link to={ doc.path } dangerouslySetInnerHTML={{ __html: doc.title }}/></li>
+        )
+      }
+    })
+
     return (
       <Layout>
         <SEO title="Docs" description="Easily sell and manage your licenses through WooCommerce" />
@@ -20,25 +61,14 @@ class Docs extends Component {
           <div className="col-4">
             <DocList>
               <h3><Link to="/docs/handbook/">Handbook</Link></h3>
-              <ul>
-                <li><i className="fas fa-folder"/> <Link to="/docs/handbook/installation/">Installation</Link></li>
-                <li><i className="fas fa-folder"/> <Link to="/docs/handbook/setup/">Setup</Link></li>
-                <li><i className="fas fa-folder"/> <Link to="/docs/handbook/plugin-settings/">Plugin Settings</Link></li>
-                <li><i className="fas fa-folder"/> <Link to="/docs/handbook/license-keys/">License keys</Link></li>
-                <li><i className="fas fa-folder"/> <Link to="/docs/handbook/generators/">Generators</Link></li>
-                <li><i className="fas fa-folder"/> <Link to="/docs/handbook/woocommerce-products/">WooCommerce Products</Link></li>
-                <li><i className="fas fa-folder"/> <Link to="/docs/handbook/woocommerce-orders/">WooCommerce Orders</Link></li>
-              </ul>
+              <ul>{ articlesHandbook }</ul>
             </DocList>
           </div>
 
           <div className="col-4">
             <DocList>
               <h3><Link to="/docs/tutorials-how-to/">Tutorials & How-To</Link></h3>
-              <ul>
-                <li><i className="fas fa-folder"/> <Link to="/docs/tutorials-how-to/additional-rest-api-validation/">Additional REST API Validation</Link></li>
-                <li><i className="fas fa-folder"/> <Link to="/docs/tutorials-how-to/modifying-the-rest-api-response/">Modifying the REST API Response</Link></li>
-              </ul>
+              <ul>{ articlesTutorialsAndHowTo }</ul>
             </DocList>
 
           </div>
@@ -54,42 +84,58 @@ class Docs extends Component {
           <div className="col-4">
             <DocList>
               <h3><Link to="/docs/rest-api/">REST API</Link></h3>
-              <ul>
-                <li><i className="fas fa-folder"/> <Link to="/docs/rest-api/requirements/">Requirements</Link></li>
-                <li><i className="fas fa-folder"/> <Link to="/docs/rest-api/generate-api-keys/">Generate API keys</Link></li>
-                <li><i className="fas fa-folder"/> <Link to="/docs/rest-api/test-if-the-api-is-working/">Test if the API is working</Link></li>
-                <li><i className="fas fa-folder"/> <Link to="/docs/rest-api/developer-documentation/">Developer Documentation</Link></li>
-                <li><i className="fas fa-folder"/> <Link to="/docs/rest-api/libraries/">Libraries</Link></li>
-              </ul>
+              <ul>{ articlesRestApi }</ul>
             </DocList>
           </div>
 
           <div className="col-4">
             <DocList>
               <h3><Link to="/docs/internal-api-docs/">Internal API docs</Link></h3>
-              <ul>
-                <li><i className="fas fa-folder"/> <Link to="/docs/internal-api-docs/database-structure/">Database Structure</Link></li>
-                <li><i className="fas fa-folder"/> <Link to="/docs/internal-api-docs/filters-reference/">Filters Reference</Link></li>
-                <li><i className="fas fa-folder"/> <Link to="/docs/internal-api-docs/functions-reference/">Functions Reference</Link></li>
-                <li><i className="fas fa-folder"/> <Link to="/docs/internal-api-docs/actions-reference/">Actions Reference</Link></li>
-              </ul>
+              <ul>{ articlesInternalApiDocs }</ul>
             </DocList>
           </div>
 
           <div className="col-4">
             <DocList>
               <h3><Link to="/docs/codex/">Codex</Link></h3>
-              <ul>
-                <li><i className="fas fa-folder"/> <Link to="/docs/codex/theming/">Theming</Link></li>
-              </ul>
+              <ul>{ articlesCodex }</ul>
             </DocList>
-
           </div>
-        </div>
 
+        </div>
       </Layout>
     )
   }
 }
 
 export default Docs
+
+export const docQuery = graphql`
+    query {
+        parents: allWordpressWpDocs(filter: { wordpress_id: { in: [7,8,9,10,11] } }, sort: { fields: menu_order, order: ASC }) {
+            edges {
+                node {
+                    title
+                    slug
+                    path
+                    menu_order
+                    wordpress_id
+                    wordpress_parent
+                }
+            }
+        },
+        children: allWordpressWpDocs(filter: { wordpress_parent: { in: [7,8,9,10,11] } }, sort: { fields: menu_order, order: ASC }) {
+            edges {
+                node {
+                    id
+                    title
+                    slug
+                    path
+                    menu_order
+                    wordpress_id
+                    wordpress_parent
+                }
+            }
+        }
+    }
+`
