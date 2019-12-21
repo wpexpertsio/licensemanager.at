@@ -3,6 +3,7 @@ import "./footer.module.scss"
 import { Link } from "gatsby"
 import logoPhpStorm from "../../images/footer-logo-phpstorm.webp";
 import logoDataGrip from "../../images/footer-logo-datagrip.webp";
+import logoGatsbyJs from "../../images/footer-logo-gatsby.webp";
 import addToMailchimp from "gatsby-plugin-mailchimp/src"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 
@@ -85,11 +86,14 @@ export default class Footer extends React.Component {
             </div>
             <div className="footer-column">
               <h4 className="footer-title">Built with</h4>
-              <OutboundLink className="footer-jetbrains-link" href="https://www.jetbrains.com/?from=license-manager-for-woocommerce" target="_blank" rel="noopener noreferrer">
-                <img src={ logoPhpStorm } alt="PhpStorm"/>
+              <OutboundLink className="built-with" href="https://www.jetbrains.com/?from=license-manager-for-woocommerce" target="_blank" rel="noopener noreferrer">
+                <img src={ logoPhpStorm } alt="PhpStorm" title="PhpStorm"/>
               </OutboundLink>
-              <OutboundLink className="footer-jetbrains-link" href="https://www.jetbrains.com/?from=license-manager-for-woocommerce" target="_blank" rel="noopener noreferrer">
-                <img src={ logoDataGrip } alt="DataGrip"/>
+              <OutboundLink className="built-with" href="https://www.jetbrains.com/?from=license-manager-for-woocommerce" target="_blank" rel="noopener noreferrer">
+                <img src={ logoDataGrip } alt="DataGrip" title="DataGrip"/>
+              </OutboundLink>
+              <OutboundLink className="built-with" href="https://www.gatsbyjs.org/" target="_blank" rel="noopener noreferrer">
+                <img src={ logoGatsbyJs } alt="GatsbyJS" title="Gatsby JS"/>
               </OutboundLink>
             </div>
           </div>
