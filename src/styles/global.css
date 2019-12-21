@@ -15,6 +15,12 @@ a {
 video {
     max-width: 100%;
 }
+code {
+    color: #DD3478;
+    background-color: #FDF3F7;
+    padding: .25em;
+}
+
 
 .container {
     margin: 0 auto;

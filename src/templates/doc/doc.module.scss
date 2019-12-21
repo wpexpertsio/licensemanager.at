@@ -39,6 +39,27 @@ div[class="doc"] {
       p[class="param-desc"] {
         padding-left: 1em;
       }
+
+      span[class="request-type get"] {
+        display: inline-block;
+        margin-right: 1em;
+        background-color: #008000;
+        color: #FFFFFF;
+        border-radius: 3px;
+        font-size: .75em;
+        padding: .25em .8em;
+      }
+
+      span[class="request-type post"],
+      span[class="request-type put"] {
+        display: inline-block;
+        margin-right: 1em;
+        background-color: #4E92D7;
+        color: #FFFFFF;
+        border-radius: 3px;
+        font-size: .75em;
+        padding: .25em .8em;
+      }
     }
 
     div[class="doc-footer"] {
