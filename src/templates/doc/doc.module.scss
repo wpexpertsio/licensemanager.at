@@ -40,25 +40,31 @@ div[class="doc"] {
         padding-left: 1em;
       }
 
-      span[class="request-type get"] {
-        display: inline-block;
+      [class="request-type get"] {
         margin-right: 1em;
-        background-color: #008000;
-        color: #FFFFFF;
+        background-color: #E0EFE6;
+        color: #57A773;
         border-radius: 3px;
         font-size: .75em;
-        padding: .25em .8em;
+        font-weight: 700;
+        padding: .25em 0.375em;
+        -webkit-box-shadow: 1px 1px 3px #57A773;
+           -moz-box-shadow: 1px 1px 3px #57A773;
+                box-shadow: 1px 1px 3px #57A773;
       }
 
-      span[class="request-type post"],
-      span[class="request-type put"] {
-        display: inline-block;
+      [class="request-type post"],
+      [class="request-type put"] {
         margin-right: 1em;
-        background-color: #4E92D7;
-        color: #FFFFFF;
+        background-color: #EEF3F5;
+        color: #175676;
         border-radius: 3px;
         font-size: .75em;
-        padding: .25em .8em;
+        font-weight: 700;
+        padding: .25em 0.375em;
+        -webkit-box-shadow: 1px 1px 3px #175676;
+           -moz-box-shadow: 1px 1px 3px #175676;
+                box-shadow: 1px 1px 3px #175676;
       }
     }
 
