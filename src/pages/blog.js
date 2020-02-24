@@ -1,20 +1,52 @@
 import React from "react"
 import Layout from "../components/layout/layout"
-import Heading from "../components/heading/heading"
+import Excerpt from "../components/excerpt/excerpt"
 import SEO from "../components/seo"
+import { graphql } from "gatsby"
 
-export default () => (
-  <Layout>
-    <SEO title="Blog" description="Easily sell and manage your licenses through WooCommerce" />
+class Blog extends React.Component {
+  render() {
+    const posts = this.props.data.posts.edges;
+    let html = [];
 
-    <div className="row">
-      <div className="col-12">
-        <Heading>Blog</Heading>
-      </div>
-      <div className="col-12">
-        <p style={{ textAlign: "center" }}>Coming soon...</p>
-      </div>
-    </div>
+    posts.forEach(edge => {
+      let post = edge.node;
 
-  </Layout>
-)
+      html.push(<Excerpt className="col-4" post={ post } key={ post.id }/>)
+    });
+
+    return (
+      <Layout>
+        <SEO title="Blog" description="Easily sell and manage your licenses through WooCommerce" />
+
+        <div className="row">
+          <div className="col-12">
+            <h1>Blog</h1>
+          </div>
+        </div>
+
+        <div className="row">{ html }</div>
+
+      </Layout>
+    )
+  }
+}
+
+export default Blog
+
+export const docQuery = graphql`
+    query {
+        posts: allWordpressPost {
+            edges {
+                node {
+                    title
+                    slug
+                    path
+                    author,
+                    excerpt,
+                    date(formatString: "d.m.Y")
+                }
+            }
+        }
+    }
+`

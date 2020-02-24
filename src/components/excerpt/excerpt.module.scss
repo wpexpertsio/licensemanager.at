@@ -1,0 +1,12 @@
+article[class="col-4 blog-post"] {
+  box-shadow: 3px 3px 5px rgba(0,0,0,.1);
+  padding: 1em;
+  border-right: 1px solid rgba(0,0,0,.1);
+  border-bottom: 2px solid rgba(0,0,0,.1);
+
+  div[class="excerpt"] {
+    p[class="link-more"] {
+      display: none;
+    }
+  }
+}

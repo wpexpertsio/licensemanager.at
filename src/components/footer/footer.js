@@ -107,6 +107,7 @@ export default class Footer extends React.Component {
               <li><Link activeClassName="active" to="/contact/">Contact</Link></li>
               <li><Link activeClassName="active" to="/docs/">Docs</Link></li>
               <li><Link activeClassName="active" to="/donate/">Donate</Link></li>
+              <li><Link activeClassName="active" to="/privacy-policy/">Privacy Policy</Link></li>
             </ul>
           </div>
         </div>

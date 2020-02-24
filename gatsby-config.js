@@ -7,13 +7,16 @@
 module.exports = {
   siteMetadata: {
     title: `License Manager for WooCommerce`,
-    description: `Easily sell and manage your license keys through WooCommerce`,
+    description: `The License Manager for WooCommerce WordPress Plugin allows you to easily sell and manage your license keys through WooCommerce.`,
     author: `Drazen Bebic`,
     siteUrl: `https://dev.licensemanager.at`
   },
   /* Your site config here */
   plugins: [
     `gatsby-plugin-sass`,
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
@@ -45,7 +48,9 @@ module.exports = {
         hostingWPCOM: false,
         useACF: false,
         includedRoutes: [
-          `**/docs`
+          `**/docs`,
+          `**/posts`,
+          `**/media`
         ]
       }
     },
@@ -53,13 +58,6 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: `UA-114996353-2`,
-        head: false
-      }
-    },
-    {
-      resolve: `gatsby-plugin-google-adsense`,
-      options: {
-        googleAdClientId: `pub-3422791839846480`,
         head: false
       }
     },
@@ -74,7 +72,7 @@ module.exports = {
       options: {
         name: `License Manager for WooCommerce`,
         short_name: `License Manager for WooCommerce`,
-        description: `Easily sell and manage your license keys through WooCommerce`,
+        description: `The License Manager for WooCommerce WordPress Plugin allows you to easily sell and manage your license keys through WooCommerce.`,
         lang: `en`,
         // Enables `Add to Homescreen` prompt and disables browser UI (including back button)
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
@@ -146,9 +144,6 @@ module.exports = {
         background_color: `#FFFFFF`,
         theme_color: `#8F1948`
       },
-    },
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sitemap`
+    }
   ]
 }

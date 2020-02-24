@@ -9,7 +9,8 @@ import SEO from "../components/seo"
 
 export default () => (
   <Layout>
-    <SEO title="Home" description="Easily sell and manage your licenses through WooCommerce" />
+    <SEO title="Home"
+         description="The License Manager for WooCommerce WordPress Plugin allows you to easily sell and manage your license keys through WooCommerce." />
     <div className="row">
       <div className="col-3">
         <PrimaryButton style={{ marginBottom: "1em" }} href="https://downloads.wordpress.org/plugin/license-manager-for-woocommerce.zip"><i
