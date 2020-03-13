@@ -10,12 +10,11 @@ class Post extends React.Component {
 
     return (
       <Layout>
-        <article>
+        <article className="blog-post">
           <time>{ post.modified }</time>
           <h1>{ post.title }</h1>
           <div className="separator"/>
           <div dangerouslySetInnerHTML={{ __html: post.content }}/>
-          <hr/>
         </article>
       </Layout>
     )

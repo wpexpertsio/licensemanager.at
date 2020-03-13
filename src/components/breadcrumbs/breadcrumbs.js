@@ -44,15 +44,19 @@ class Breadcrumbs extends React.Component {
     let url = ""
 
     breadcrumbs.push(
-      <span key="crumb-home" className="crumb">
-        <Link to="/"><i className="fas fa-home"/> Home</Link>
-      </span>
+
+    )
+    breadcrumbs.push(
+        <Link key="crumb-home" className="crumb" to="/"><i className="fas fa-home"/> Home</Link>
     )
 
     urlParams.forEach(param => {
       if (param !== "") {
         breadcrumbs.push(
-            <span key={ "crumb-" + url + param } className="crumb">&nbsp;|&nbsp; <Link to={"/" + url + param + "/"}>{ this.getRouteName(param) }</Link></span>
+          <span key={ "crumb-sep-" + url + param }>&nbsp;|&nbsp;</span>
+        )
+        breadcrumbs.push(
+          <Link key={ "crumb-link-" + url + param } className="crumb" to={"/" + url + param + "/"}>{ this.getRouteName(param) }</Link>
         )
         url += param + "/"
       }

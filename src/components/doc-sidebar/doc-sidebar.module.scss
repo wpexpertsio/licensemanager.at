@@ -67,15 +67,15 @@ div[class="doc-sidebar"] {
 
 // 768px+
 @media all and (min-width: 768px) {
-  div[class="doc-sidebar"] {
-    width: 25%;
-    border-right: 1px solid rgba(0,0,0,.1);
-    padding-right: 1.5em;
-  }
 }
 
 // 992px+
 @media all and (min-width: 992px) {
+  div[class="doc-sidebar"] {
+    width: 25%;
+    border-left: 1px solid rgba(0,0,0,.1);
+    padding-left: 1.5em;
+  }
 }
 
 // 1200px+

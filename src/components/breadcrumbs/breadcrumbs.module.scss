@@ -1,8 +1,18 @@
 div[class="doc-breadcrumbs"] {
-  margin: 1.5em 0;
-  padding: 1.5em 0;
+  margin-bottom: 1.5em;
   border-top: 1px solid rgba(0,0,0,.1);
   border-bottom: 1px solid rgba(0,0,0,.1);
+
+  a[class="crumb"] {
+    display: inline-block;
+    padding: 1em .25em;
+    font-size: .85em;
+  }
+
+  span {
+    display: inline-block;
+    color: rgba(0,0,0,.2);
+  }
 }
 
 // 576px+
@@ -11,16 +21,13 @@ div[class="doc-breadcrumbs"] {
 
 // 768px+
 @media all and (min-width: 768px) {
-  div[class="doc-breadcrumbs"] {
-    padding: 0 0 1em;
-    margin: 0 0 0 0;
-    border-bottom: 1px solid rgba(0,0,0,.1);
-    border-top: none;
-  }
 }
 
 // 992px+
 @media all and (min-width: 992px) {
+  div[class="doc-breadcrumbs"] {
+    border-top: none;
+  }
 }
 
 // 1200px+

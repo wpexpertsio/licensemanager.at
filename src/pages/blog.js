@@ -18,15 +18,7 @@ class Blog extends React.Component {
     return (
       <Layout>
         <SEO title="Blog" description="Easily sell and manage your licenses through WooCommerce" />
-
-        <div className="row">
-          <div className="col-12">
-            <h1>Blog</h1>
-          </div>
-        </div>
-
         <div className="row">{ html }</div>
-
       </Layout>
     )
   }

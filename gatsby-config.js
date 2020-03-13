@@ -9,7 +9,7 @@ module.exports = {
     title: `License Manager for WooCommerce`,
     description: `The License Manager for WooCommerce WordPress Plugin allows you to easily sell and manage your license keys through WooCommerce.`,
     author: `Drazen Bebic`,
-    siteUrl: `https://dev.licensemanager.at`
+    siteUrl: `https://www.licensemanager.at`
   },
   /* Your site config here */
   plugins: [

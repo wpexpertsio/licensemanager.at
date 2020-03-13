@@ -25,7 +25,6 @@ class Doc extends React.Component {
       <Layout>
         <SEO title={ doc.title } description="Easily sell and manage your licenses through WooCommerce" />
         <div className="doc">
-          <DocSidebar parentData={ this.props }/>
           <div className="doc-content">
             <div className="doc-breadcrumbs">
               <Breadcrumbs pathname={ this.props.location.pathname }/>
@@ -44,6 +43,7 @@ class Doc extends React.Component {
               </div>
             </div>
           </div>
+          <DocSidebar parentData={ this.props }/>
         </div>
       </Layout>
     )
