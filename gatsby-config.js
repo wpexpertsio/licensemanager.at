@@ -144,6 +144,45 @@ module.exports = {
         background_color: `#FFFFFF`,
         theme_color: `#8F1948`
       },
+    },
+    {
+      resolve: `gatsby-plugin-htaccess`,
+      options: {
+        host: 'www.licensemanager.at',
+        https: true,
+        www: true,
+        ErrorDocument: `
+          ErrorDocument 401 /404.html
+          ErrorDocument 404 /404.html
+          ErrorDocument 500 /404.html
+        `,
+        custom: `
+          <IfModule mod_expires.c>
+            ExpiresActive On
+          
+            # Images
+            ExpiresByType image/jpeg "access plus 1 year"
+            ExpiresByType image/gif "access plus 1 year"
+            ExpiresByType image/png "access plus 1 year"
+            ExpiresByType image/webp "access plus 1 year"
+            ExpiresByType image/svg+xml "access plus 1 year"
+            ExpiresByType image/x-icon "access plus 1 year"
+          
+            # Video
+            ExpiresByType video/mp4 "access plus 1 year"
+            ExpiresByType video/mpeg "access plus 1 year"
+          
+            # CSS, JavaScript
+            ExpiresByType text/css "access plus 1 month"
+            ExpiresByType text/javascript "access plus 1 month"
+            ExpiresByType application/javascript "access plus 1 month"
+          
+            # Others
+            ExpiresByType application/pdf "access plus 1 month"
+            ExpiresByType application/x-shockwave-flash "access plus 1 month"
+          </IfModule>
+        `
+      }
     }
   ]
 }
