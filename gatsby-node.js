@@ -53,8 +53,6 @@ exports.createPages = async ({ graphql, actions }) => {
   });
 
   posts.data.allWordpressPost.edges.forEach(edge => {
-    console.log('blog' + edge.node.path);
-
     createPage({
       path: 'blog' + edge.node.path,
       component: slash(postTemplate),

@@ -8,7 +8,7 @@ div[class="doc-sidebar"] {
       margin: 0;
 
       > a {
-        font-size: .9em;
+        font-size: .8em;
         padding: .5em 1.235em;
         display: block;
         -webkit-transition: all .3s ease;
@@ -20,7 +20,11 @@ div[class="doc-sidebar"] {
         &[class="active"] {
           font-weight: 800;
           background-color: #8F1948;
+          background: #8F1948 linear-gradient(25deg, #8F1948, #ff3695);
           color: #FFFFFF;
+        }
+        &:hover:not([class="active"]) {
+          font-weight: 800;
         }
       }
 
@@ -28,6 +32,7 @@ div[class="doc-sidebar"] {
         > a {
           font-weight: 800;
           background-color: #8F1948;
+          background: #8F1948 linear-gradient(25deg, #8F1948, #ff3695);
           color: #FFFFFF;
         }
       }
@@ -35,15 +40,16 @@ div[class="doc-sidebar"] {
       // Second level <ul>
       > ul {
         list-style: none;
-        margin: 1em 0 1em 1em;
+        margin: 1em 0 1em 0;
         border-left: 1px solid rgba(0,0,0,.1);
 
         > li {
           > a {
             color: #333333;
-            font-size: .9em;
+            font-size: .8em;
             padding: .5em 1.235em;
             display: block;
+            border-left: 2px solid transparent;
             -webkit-transition: all .3s ease;
                -moz-transition: all .3s ease;
                 -ms-transition: all .3s ease;
@@ -52,6 +58,9 @@ div[class="doc-sidebar"] {
 
             &[class="active"] {
               border-left: 2px solid #8F1948;
+              font-weight: 800;
+            }
+            &:hover:not([class="active"]) {
               font-weight: 800;
             }
           }
@@ -73,8 +82,6 @@ div[class="doc-sidebar"] {
 @media all and (min-width: 992px) {
   div[class="doc-sidebar"] {
     width: 25%;
-    border-left: 1px solid rgba(0,0,0,.1);
-    padding-left: 1.5em;
   }
 }
 

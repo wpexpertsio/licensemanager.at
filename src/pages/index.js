@@ -53,8 +53,9 @@ export default () => (
           </div>
           <div className="card-text">
             <h3>Import your license keys</h3>
-            <p>Add and import your license keys to your WooCommerce shop. You can add them one by one, or in bulk! Just
-              upload your CSV/TXT file and be done with it. Sell your added keys, use a generator, or… do both!</p>
+            <p>Already have your own license keys you'd like to use? No Problem! Simply import your license keys
+              to your shop and let our plugin do the rest. Upload your CSV/TXT file and be done with it.
+              Sell your added keys, use a generator, or… do both!</p>
           </div>
         </Card>
       </div>
@@ -86,6 +87,18 @@ export default () => (
       <div className="col-6">
         <Card>
           <div className="card-icon">
+            <i className="fas fa-box-open"/>
+          </div>
+          <div className="card-text">
+            <h3>Stock management</h3>
+            <p>Allow the plugin to automatically take care of updating your product stock each time a license is added,
+            sold, activated, deactivated, and deleted.</p>
+          </div>
+        </Card>
+      </div>
+      <div className="col-6">
+        <Card>
+          <div className="card-icon">
             <i className="fas fa-lock"/>
           </div>
           <div className="card-text">
@@ -102,8 +115,8 @@ export default () => (
           </div>
           <div className="card-text">
             <h3>WooCommerce Integration</h3>
-            <p>The License Manager plugin is built for WooCommerce, thus seamlessly integrates into WooCommerce
-              functionality. Offering licensing options for both simple and variable products, adding new and
+            <p>The License Manager plugin is <u>built for WooCommerce</u>, thus seamlessly integrates into its workflows
+              and functionality. Supporting licensing options for both simple and variable products, adding new and
               customizable emails, new order actions, and much more.</p>
           </div>
         </Card>
