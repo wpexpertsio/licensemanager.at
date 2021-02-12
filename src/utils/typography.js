@@ -4,11 +4,11 @@ const typography = new Typography({
   baseFontSize: "18px",
   baseLineHeight: 1.666,
   headerFontFamily: [
-    "Raleway",
+    "Inter",
     "sans-serif"
   ],
   bodyFontFamily: [
-    "Titillium Web",
+    "Inter",
     "sans-serif"
   ]
 })

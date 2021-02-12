@@ -24,21 +24,13 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Raleway`,
-            subsets: [`latin`],
-            variants: [`400`, `800`]
-          },
-          {
-            family: `Titillium Web`,
-            variants: [`400`, `600`]
-          },
+          `inter\:400,700`,
         ],
-        fontDisplay: `swap`
-      },
+        display: 'swap'
+      }
     },
     {
       resolve: `gatsby-source-wordpress`,
