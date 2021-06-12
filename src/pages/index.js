@@ -5,13 +5,13 @@ import Heading from "../components/heading/heading"
 import Card from "../components/card/card"
 import { Link } from "gatsby"
 import demoVideo from "../videos/demo.webm"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
-export default class Index extends React.Component {
+class Index extends React.Component {
   render() {
     return (
       <Layout>
-        <SEO title="Home" description="The License Manager for WooCommerce WordPress Plugin allows you to easily sell and manage your licenses through WooCommerce." />
+        <Seo title="Home" description="The License Manager for WooCommerce WordPress Plugin allows you to easily sell and manage your licenses through WooCommerce." />
 
         <div className="row">
 
@@ -177,3 +177,5 @@ export default class Index extends React.Component {
     )
   }
 }
+
+export default Index

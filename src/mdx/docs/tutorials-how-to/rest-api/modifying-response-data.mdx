@@ -25,7 +25,7 @@ The process is rather simple, you need to hook into the
 `add_filter()`. This filter takes 3 arguments. Your code would then look
 something like this:
 
-```
+```php
 function lmfwc_tutorial_modify_response($method, $route, $data) {
     // First check if we are on the correct route
     if ($route !== 'v2/licenses/activate/{license_key}') {

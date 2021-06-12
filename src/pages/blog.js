@@ -1,7 +1,7 @@
 import React from "react"
 import "./blog.scss"
 import Layout from "../components/layout/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import { graphql, Link } from "gatsby";
 import moment from "moment";
 import Heading from "../components/heading/heading";
@@ -12,7 +12,7 @@ class Blog extends React.Component {
 
     return (
       <Layout>
-        <SEO title="Blog" description="The License Manager for WooCommerce WordPress Plugin allows you to easily sell and manage your licenses through WooCommerce." />
+        <Seo title="Blog" description="The License Manager for WooCommerce WordPress Plugin allows you to easily sell and manage your licenses through WooCommerce." />
 
         <div className="row">
           <div className="col-12">

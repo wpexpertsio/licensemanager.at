@@ -5,7 +5,7 @@ import logoPhpStorm from "../../images/footer-logo-phpstorm.webp";
 import logoDataGrip from "../../images/footer-logo-datagrip.webp";
 import logoGatsbyJs from "../../images/footer-logo-gatsby.webp";
 import addToMailchimp from "gatsby-plugin-mailchimp"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 
 export default class Footer extends React.Component {
   state = {

@@ -1,7 +1,7 @@
 import React from "react"
 import "./doc.scss"
 import Layout from "../../components/layout/layout"
-import SEO from "../../components/seo"
+import Seo from "../../components/seo"
 import { graphql, Link } from "gatsby"
 import Sidebar from "../../components/sidebar"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -34,7 +34,7 @@ class Doc extends React.Component {
     const mdx = this.props.data.mdx;
     return (
       <Layout>
-        <SEO title={mdx.frontmatter.title + " | License Manager for WooCommerce"}
+        <Seo title={mdx.frontmatter.title + " | License Manager for WooCommerce"}
              description={mdx.frontmatter.description}/>
 
         <div className={"doc"}>

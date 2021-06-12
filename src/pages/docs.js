@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import "./docs.scss"
 import Layout from "../components/layout/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Structure from "../config/sidebar.yml"
 import PrimaryButton from "../components/primary-button/primary-button"
 import Heading from "../components/heading/heading";
@@ -35,7 +35,7 @@ class Docs extends Component {
 
     return (
       <Layout>
-        <SEO title="Docs" description="Easily sell and manage your licenses through WooCommerce" />
+        <Seo title="Docs" description="Easily sell and manage your licenses through WooCommerce" />
 
         <div className={"row"}>
           <div className={"col-12"}>
