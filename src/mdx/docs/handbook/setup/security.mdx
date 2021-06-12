@@ -1,7 +1,7 @@
 ---
 title: Security
 description:
-lastModified: 14.03.2021
+lastModified: 30.06.2021
 ---
 
 The plugin will also create a **.htaccess** file in the above-mentioned directory. This file is used to disable direct
@@ -16,7 +16,7 @@ secrets to a safer place.
 
 To do this, open the **wp-config.php** file and add the following lines to it:
 
-```
+```php
 define('LMFWC_PLUGIN_SECRET', 'secret.txt');
 define('LMFWC_PLUGIN_DEFUSE', 'defuse.txt');
 ```

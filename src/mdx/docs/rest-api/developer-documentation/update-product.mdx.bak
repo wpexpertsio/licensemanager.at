@@ -1,7 +1,7 @@
 ---
 title: Update a product
 description:
-lastModified: 14.03.2021
+lastModified: 30.06.2021
 ---
 
 ## Description
@@ -29,7 +29,7 @@ plugin/product sold the customer.
     "tested": "5.5.3",
     "requires": "5.4.0",
     "requires_php": "7.0.0",
-    "last_updated": "2020-12-01 23:29:57",
+    "last_updated": "2021-06-30 23:29:57",
     "sections": {
       "changelog": "<p><strong>1.0.0</strong></p><ul><li>Initial release</li></ul>"
     }

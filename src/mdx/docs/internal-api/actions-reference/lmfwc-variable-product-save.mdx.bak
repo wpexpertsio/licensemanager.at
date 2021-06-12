@@ -1,7 +1,7 @@
 ---
 title: lmfwc_variable_product_save
 description:
-lastModified: 14.03.2021
+lastModified: 30.06.2021
 ---
 
 ## Description
@@ -18,7 +18,7 @@ Name | Type | Description
 
 ## Usage
 
-```
+```php
 add_action('lmfwc_variable_product_save', function($variation_id) {
 
   if (isset($_POST['favorite_foo_fighters_song'][$loop])) {

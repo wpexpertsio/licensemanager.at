@@ -1,7 +1,7 @@
 ---
 title: lmfwc_variable_product_data_panel
 description:
-lastModified: 14.03.2021
+lastModified: 30.06.2021
 ---
 
 ## Description
@@ -20,7 +20,7 @@ Name | Type | Description
 
 ## Usage
 
-```
+```php
 add_action('lmfwc_variable_product_data_panel', function($post) {
 
   $current_value = get_post_meta(

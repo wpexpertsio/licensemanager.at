@@ -1,7 +1,7 @@
 ---
 title: Create a generator
 description:
-lastModified: 14.03.2021
+lastModified: 30.06.2021
 ---
 
 ## Description
@@ -18,25 +18,14 @@ object.
 
 ## Request headers
 
-```
+```yaml
 Content-Type: application/json
 ```
 
-## Request example (PHP)
+## Request body
 
-```
-$curl = curl_init();
-
-curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://example.com/wp-json/lmfwc/v2/generators",
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => "",
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 0,
-  CURLOPT_FOLLOWLOCATION => false,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => "POST",
-  CURLOPT_POSTFIELDS =>"{
+```json
+{
   "name": "Generator created by the API",
   "charset": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
   "chunks": 5,
@@ -46,27 +35,12 @@ curl_setopt_array($curl, array(
   "prefix": null,
   "suffix": null,
   "expires_in": null
-}",
-  CURLOPT_HTTPHEADER => array(
-    "Content-Type: application/json"
-  ),
-));
-
-$response = curl_exec($curl);
-$err = curl_error($curl);
-
-curl_close($curl);
-
-if ($err) {
-  echo "cURL Error #:" . $err;
-} else {
-  echo $response;
 }
 ```
 
 ## Response example
 
-```
+```json
 {
   "success": true,
   "data": {
@@ -80,7 +54,7 @@ if ($err) {
     "prefix": null,
     "suffix": null,
     "expiresIn": null,
-    "createdAt": "2019-09-04 20:28:46",
+    "createdAt": "2021-06-30 20:28:46",
     "createdBy": "1",
     "updatedAt": null,
     "updatedBy": null
