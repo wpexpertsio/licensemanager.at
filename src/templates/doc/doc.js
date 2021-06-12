@@ -41,7 +41,7 @@ class Doc extends React.Component {
           <Sidebar path={this.state.path}/>
 
           <main className={"doc-content"}>
-            <h1 className={"doc-main-title"}>{ mdx.frontmatter.title }</h1>
+            <h1 className={"doc-title"}>{ mdx.frontmatter.title }</h1>
 
             <MDXRenderer>{mdx.body}</MDXRenderer>
             <hr/>
