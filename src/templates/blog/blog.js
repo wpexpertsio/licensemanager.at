@@ -10,6 +10,7 @@ class Blog extends React.Component {
 
   render() {
     const mdx = this.props.data.mdx;
+    const gravatar = this.props.data.gravatar.url;
 
     return (
       <Layout>
@@ -24,15 +25,19 @@ class Blog extends React.Component {
           <div className={"col-12"}>
             <div className={"single-blog-entry"}>
 
-              <div className={"blog-author"}>
-              </div>
-
               <MDXRenderer>{ mdx.body }</MDXRenderer>
 
-              <p>
-                <small>{ moment(mdx.frontmatter.date).format('DD.MM.YYYY') },</small>
-                <small>&nbsp;{ mdx.frontmatter.author }</small>
-              </p>
+              <hr/>
+
+              <div className={"blog-author"}>
+                <img src={ gravatar } alt="" />
+                <div>
+                  <p>
+                    <small><strong>Author</strong> { mdx.frontmatter.author }</small><br/>
+                    <small><strong>Date</strong> { moment(mdx.frontmatter.date).format("DD.MM.YYYY") }</small>
+                  </p>
+                </div>
+              </div>
 
             </div>
           </div>
@@ -48,7 +53,7 @@ class Blog extends React.Component {
 export default Blog
 
 export const blogQuery = graphql`
-  query ($id: String) {
+  query ($id: String, $email: String) {
     mdx(id: { eq: $id }) {
       id
       body
@@ -62,6 +67,9 @@ export const blogQuery = graphql`
         year
         excerpt
       }
+    },
+    gravatar(email: { eq: $email }) {
+      url
     }
   }
 `

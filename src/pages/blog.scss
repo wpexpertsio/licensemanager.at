@@ -46,11 +46,9 @@
         }
       }
 
-
-
       &:hover {
-        -webkit-box-shadow: 7px 7px 15px rgba(223, 46, 127, 0.025);
-        -moz-box-shadow: 7px 7px 15px rgba(223, 46, 127, 0.025);
+        -webkit-box-shadow: 10px 10px 20px rgba(223, 46, 127, 0.2);
+        -moz-box-shadow: 10px 10px 20px rgba(223, 46, 127, 0.2);
         box-shadow: 10px 10px 20px rgba(223, 46, 127, 0.2);
       }
     }
