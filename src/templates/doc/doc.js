@@ -40,38 +40,38 @@ class Doc extends React.Component {
         <div className={"doc"}>
           <Sidebar path={this.state.path}/>
 
-          <main className={"doc-main"}>
-            <div className={"doc-main-content"}>
-              <h1 className={"doc-main-title"}>{ mdx.frontmatter.title }</h1>
+          <main className={"doc-content"}>
+            <h1 className={"doc-main-title"}>{ mdx.frontmatter.title }</h1>
 
-              <MDXRenderer>{mdx.body}</MDXRenderer>
-              <hr/>
-              <p className={"help"}>
-                <i className="far fa-envelope"/>
-                <span>Stuck or need help? <Link to={"/contact"}>Let us know!</Link></span>
+            <MDXRenderer>{mdx.body}</MDXRenderer>
+            <hr/>
+            <p className={"help"}>
+              <i className="far fa-envelope"/>
+              <span>Stuck or need help? <Link to={"/contact"}>Let us know!</Link></span>
 
-                <span className={"last-modified"}>
+              <span className={"last-modified"}>
                   Updated on: {mdx.frontmatter.lastModified}
                 </span>
-              </p>
-            </div>
-            <div className={"doc-main-scrollspy"}>
-              <h3>All docs</h3>
-              <ul>
-                {
-                  Structure.map(chapter => {
-                    return(
-                      <li key={"scrollspy-chapter-" + chapter.link}>
-                        <Link to={"/docs" + chapter.link + chapter.items[0].link + chapter.items[0].items[0].link} className={(this.state.path === chapter.link) ? "active" : ""}>
-                          {chapter.label}
-                        </Link>
-                      </li>
-                    )
-                  })
-                }
-              </ul>
-            </div>
+            </p>
           </main>
+          <aside className={"doc-main-scrollspy"}>
+            <h3>All docs</h3>
+            <ul>
+              {
+                Structure.map(chapter => {
+                  return(
+                    <li key={"scrollspy-chapter-" + chapter.link}>
+                      <Link to={"/docs" + chapter.link + chapter.items[0].link + chapter.items[0].items[0].link}
+                            className={(this.state.path === chapter.link) ? "active" : ""}>
+                        {chapter.label}
+                      </Link>
+                    </li>
+                  )
+                })
+              }
+            </ul>
+          </aside>
+
         </div>
       </Layout>
     )

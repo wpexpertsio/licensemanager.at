@@ -26,36 +26,35 @@ export default class Index extends React.Component {
             }
 
             return (
-              <>
-                <nav>
-                  <ul>
-                    {
-                      chapter.items.map((item, i) => {
-                        return(
-                          <>
-                            <li key={"chapter-" + i}>{item.label}</li>
-                            <ul key={"chapter-list-" + i}>
-                              {
-                                item.items.map((subItem, j) => {
-                                  return(
-                                    <li key={"sub-chapter-" + i + "-" + j}>
-                                      <Link to={'/docs' + chapter.link + item.link + subItem.link}
-                                            activeClassName={"active"}
-                                            key={"sub-chapter-link-" + j}>
-                                        {subItem.label}
-                                      </Link>
-                                    </li>
-                                  );
-                                })
-                              }
-                            </ul>
-                          </>
-                        )
-                      })
-                    }
-                  </ul>
-                </nav>
-              </>
+              <nav>
+                <ul>
+                  {
+                    chapter.items.map((item, i) => {
+                      return(
+                        <>
+                          <li key={"chapter-" + i}>{item.label}</li>
+                          <ul key={"chapter-list-" + i}>
+                            {
+                              item.items.map((subItem, j) => {
+                                return(
+                                  <li key={"sub-chapter-" + i + "-" + j}>
+                                    <Link to={'/docs' + chapter.link + item.link + subItem.link}
+                                          activeClassName={"active"}
+                                          key={"sub-chapter-link-" + j}>
+                                      {subItem.label}
+                                    </Link>
+                                  </li>
+                                );
+                              })
+                            }
+                          </ul>
+                        </>
+                      )
+                    })
+                  }
+                </ul>
+              </nav>
+
             )
           })}
         </aside>
