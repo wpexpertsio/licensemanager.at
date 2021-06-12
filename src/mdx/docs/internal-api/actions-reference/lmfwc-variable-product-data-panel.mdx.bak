@@ -1,0 +1,50 @@
+---
+title: lmfwc_variable_product_data_panel
+description:
+lastModified: 14.03.2021
+---
+
+## Description
+
+This action allows you to add additional input fields in the
+**License Manager** section of variable WooCommerce products (found under
+each individual variation).
+
+## Parameters
+
+Name | Type | Description
+--- | --- | ---
+`$loop` | `int` | Current variation loop
+`$variation_data` | `Array` | Data associated to the current variation
+`$variation` | `WP_Post` | WooCommerce Post object
+
+## Usage
+
+```
+add_action('lmfwc_variable_product_data_panel', function($post) {
+
+  $current_value = get_post_meta(
+    $variation->ID,
+    'favorite_foo_fighters_song',
+    true
+  );
+
+  woocommerce_wp_select(
+    array(
+      'id'      => 'favorite_foo_fighters_song_' . $loop,
+      'name'    => 'favorite_foo_fighters_song_[' . $loop . ']',
+      'label'   => 'Favorite Foo Fighters song',
+      'options' => array(
+        'everlong'      => 'Everlong',
+        'the_pretender' => 'The Pretender',
+        'best_of_you'   => 'Best of You'
+      ),
+      'value' => $current_value
+    )
+  );
+
+});
+```
+
+This will add a dropdown by the name of **Favorite Foo Fighters song** to each
+individual variation of a variable WooCommerce Product.

@@ -1,0 +1,28 @@
+---
+title: lmfwc_table_licenses_column_name
+description:
+lastModified: 14.03.2021
+---
+
+## Description
+
+This filter is used to add or modify column headers on the **Licenses**
+page/table.
+
+## Parameters
+
+Name | Type | Description
+--- | --- | ---
+`$columns` | `Array` | Array containing key/value pairs of existing columns.
+
+## Usage
+
+```
+add_filter('lmfwc_table_licenses_column_name', function($columns) {
+  $columns['foo_fighters'] = 'Foo Fighters';
+
+  return $columns;
+});
+```
+
+This will add a new column by the name of **Foo Fighters**.

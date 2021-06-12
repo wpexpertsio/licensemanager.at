@@ -2,10 +2,11 @@
 
 header {
   display: flex;
-  background-color: #8F1948;
+  background-color: #DF2E7F;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 1.5em;
+  border-radius: 4px;
 
   div {
     width: 100%;
@@ -56,6 +57,7 @@ header {
 // 1200px+
 @media all and (min-width: 1200px) {
   header {
+    margin-bottom: 2em;
     padding: 3.5em;
 
     div {

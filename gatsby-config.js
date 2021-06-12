@@ -11,12 +11,37 @@ module.exports = {
     author: `Drazen Bebic`,
     siteUrl: `https://www.licensemanager.at`
   },
-  /* Your site config here */
   plugins: [
+    `gatsby-plugin-force-trailing-slashes`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
+    `gatsby-remark-images`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [".md", ".mdx"],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+              quality: 70
+            }
+          },
+          {
+            resolve: `gatsby-remark-highlight-code`,
+            options: {
+              terminal: 'carbon',
+              theme: 'synthwave'
+            }
+          }
+        ]
+      }
+    },
     {
       resolve: `gatsby-plugin-typography`,
       options: {
@@ -33,17 +58,17 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-source-wordpress`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        baseUrl: `cms.licensemanager.at`,
-        protocol: `https`,
-        hostingWPCOM: false,
-        useACF: false,
-        includedRoutes: [
-          `**/docs`,
-          `**/posts`,
-          `**/media`
-        ]
+        path: `${__dirname}/src/mdx`,
+        name: `mdxPages`,
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/images`,
+        name: `mdxImages`
       }
     },
     {
@@ -174,6 +199,19 @@ module.exports = {
             ExpiresByType application/x-shockwave-flash "access plus 1 month"
           </IfModule>
         `
+      }
+    },
+    {
+      resolve: `gatsby-source-gravatar`,
+      options: {
+        emails: [
+          { email: `drazen@licensemanager.at`, query: `?size=128` },
+        ],
+        // No query string is passed to gravatar by default.
+        // But you can add your gravatar query parameters here.
+        // See https://en.gravatar.com/site/implement/images/
+        // If this is set, it will be the default for `emails` (see above) with no `query` options.
+        query: `?size=128&m=dp`,
       }
     }
   ]

@@ -1,15 +1,8 @@
 // 0px+
 [id="main-content"] {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  background-color: #FFFFFF;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-}
-
-[id="inner-content"] {
-  width: 90%;
-  margin: 0 auto;
-  padding-top: 60px;
+  padding: 0 2em;
 }
 
 // 576px+
@@ -18,9 +11,6 @@
 
 // 768px+
 @media all and (min-width: 768px) {
-  [id="main-content"] {
-    padding-top: 60px;
-  }
 }
 
 // 992px+
@@ -29,7 +19,4 @@
 
 // 1200px+
 @media all and (min-width: 1200px) {
-  [id="inner-content"] {
-    padding-top: 3em;
-  }
 }

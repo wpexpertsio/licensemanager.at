@@ -1,0 +1,217 @@
+// 0px+
+footer {
+  margin-top: 4em;
+  padding-top: 4em;
+  background-color: #000500;
+  color: #FFFFFF;
+
+  .outer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2em;
+
+    .footer-columns {
+      .footer-column {
+        margin: 0 0 2em 0;
+
+        h4 {
+          font-weight: 600;
+          margin: 0 0 1em;
+          text-transform: uppercase;
+          color: #DF2E7F;
+
+          &:not(:first-child) {
+            margin-top: 1em;
+          }
+        }
+
+        a.footer-link {
+          font-size: 2em;
+          margin-right: .375em;
+          text-decoration: none;
+          color: #FFFFFF;
+          -webkit-transition: color .3s ease;
+             -moz-transition: color .3s ease;
+              -ms-transition: color .3s ease;
+               -o-transition: color .3s ease;
+                  transition: color .3s ease;
+
+          &:hover {
+            color: #DF2E7F;
+          }
+        }
+
+        a.built-with {
+          margin-right: .75em;
+
+          img {
+            margin: 0;
+          }
+        }
+
+        a.rate-us {
+          display: block;
+          border: 2px solid #DF2E7F;
+          border-radius: 4px;
+          padding: .75em 1em;
+          line-height: 1em;
+          text-align: center;
+          font-weight: 600;
+          -webkit-transition: .3s all ease;
+             -moz-transition: .3s all ease;
+              -ms-transition: .3s all ease;
+               -o-transition: .3s all ease;
+                  transition: .3s all ease;
+
+          &:hover {
+            background-color: #DF2E7F;
+            color: #FFFFFF;
+          }
+        }
+
+        form {
+          margin: 0;
+
+          input {
+            display: block;
+            width: 100%;
+            font-weight: 600;
+            background-color: #F2F2F2;
+            padding: .75em 1em;
+            border: 2px solid transparent;
+            border-radius: 4px;
+            margin-bottom: 1em;
+            line-height: 1em;
+            -webkit-transition: .3s all ease;
+               -moz-transition: .3s all ease;
+                -ms-transition: .3s all ease;
+                 -o-transition: .3s all ease;
+                    transition: .3s all ease;
+
+            &:focus {
+              background-color: #DF2E7F;
+              color: #FFFFFF;
+              outline: none;
+            }
+          }
+
+          input[type="submit"] {
+            cursor: pointer;
+            background-color: transparent;
+            border: 2px solid #DF2E7F;
+            color: #DF2E7F;
+            line-height: 1em;
+            margin-bottom: 0;
+
+            &:hover {
+              background-color: #DF2E7F;
+              color: #FFFFFF;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-nav {
+      ul {
+        padding: 1em 0;
+        margin: 0;
+        list-style: none;
+        text-align: center;
+
+        li {
+          display: inline-block;
+          padding: 0 1.5em 0 0;
+          font-weight: 600;
+          margin: 0;
+
+          a {
+            text-decoration: none;
+            font-size: .8em;
+            color: #FFFFFF;
+            -webkit-transition: color .3s ease;
+               -moz-transition: color .3s ease;
+                -ms-transition: color .3s ease;
+                 -o-transition: color .3s ease;
+                    transition: color .3s ease;
+
+            &.active,
+            &:hover {
+              color: #DF2E7F;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding: 1em 0;
+
+      span.copyright-text {
+        font-size: .7em;
+        color: #DF2E7F;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &:after {
+    display: block;
+    width: 100%;
+    height: 4px;
+    content: "";
+    background-color: #DF2E7F;
+  }
+}
+
+// 576px+
+@media all and (min-width: 576px) {
+}
+
+// 768px+
+@media all and (min-width: 768px) {
+  footer {
+    padding-top: 3em;
+
+    .footer-columns {
+      .footer-column {
+        padding: 0 2em 0 0;
+        vertical-align: top;
+        display: inline-block;
+        width: 33.33%;
+      }
+    }
+  }
+}
+
+// 992px+
+@media all and (min-width: 992px) {
+  footer {
+    div.footer-nav {
+      ul {
+        text-align: left;
+      }
+    }
+
+    div.footer-bottom {
+      text-align: left;
+    }
+  }
+}
+
+// 1200px+
+@media all and (min-width: 1200px) {
+  footer {
+    border-top-width: 40px;
+    padding-top: 4em;
+
+    div.footer-columns {
+      div.footer-column {
+        h4.footer-title {
+          margin: 0 0 1.5em;
+        }
+      }
+    }
+  }
+}

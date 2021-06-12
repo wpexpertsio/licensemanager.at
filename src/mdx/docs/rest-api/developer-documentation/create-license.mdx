@@ -1,0 +1,60 @@
+---
+title: Create a license
+description:
+lastModified: 14.03.2021
+---
+
+## Description
+
+Creates a new license key with the given parameters from the request body. It
+is possible to leave out certain keys, or explicitly set them to “null”. The
+response will contain the newly created license key data object.
+
+## Request URL
+
+<div className={"doc-request-example"} style={{ marginBottom: '1em' }}>
+  <div className={"method post"}>POST</div>
+  <div className={"url"}>/wp-json/lmfwc/v2/licenses</div>
+</div>
+
+## Request headers
+
+```
+Content-Type: application/json
+```
+
+## Request body
+
+```
+{
+  "product_id": "1777",
+  "license_key": "ECHOES-SILENCE-PATIENCE-AND-GRACE",
+  "valid_for": "365",
+  "status": "active",
+  "times_activated_max": 1
+}
+```
+
+## Response example
+
+```
+{
+  "success": true,
+  "data": {
+    "id": "4",
+    "orderId": null,
+    "productId": "1777",
+    "licenseKey": "ECHOES-SILENCE-PATIENCE-AND-GRACE",
+    "expiresAt": null,
+    "validFor": "365",
+    "source": "3",
+    "status": "3",
+    "timesActivated": null,
+    "timesActivatedMax": "1",
+    "createdAt": "2019-09-04 18:14:42",
+    "createdBy": "1",
+    "updatedAt": null,
+    "updatedBy": null
+  }
+}
+```

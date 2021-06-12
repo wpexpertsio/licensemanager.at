@@ -1,0 +1,39 @@
+---
+title: lmfwc_simple_product_save
+description:
+lastModified: 14.03.2021
+---
+
+## Description
+
+This action allows you to perform additional action during the **POST**
+request which is triggered when saving a simple WooCommerce product.
+
+## Parameters
+
+Name | Type | Description
+--- | --- | ---
+`$product_id` | `int` | WooCommerce Product ID
+
+## Usage
+
+```
+add_action('lmfwc_simple_product_save', function($product_id) {
+
+  if (isset($_POST['favorite_foo_fighters_song'])) {
+    $value = sanitize_text_field(
+      $_POST['favorite_foo_fighters_song']
+    );
+
+    update_post_meta(
+      $product_id,
+      'favorite_foo_fighters_song',
+      $value
+    );
+  }
+
+});
+```
+
+This will store the POST field **favorite_foo_fighters_song** into the
+Product's post meta.

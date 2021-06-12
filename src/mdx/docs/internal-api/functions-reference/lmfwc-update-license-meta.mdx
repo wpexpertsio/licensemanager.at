@@ -1,0 +1,41 @@
+---
+title: lmfwc_update_license_meta()
+description:
+lastModified: 14.03.2021
+---
+
+```
+function lmfwc_update_license_meta(int $licenseId, string $metaKey, mixed $metaValue, mixed $previousValue = null)
+```
+
+## Description
+
+Updates an existing license meta entry. If the meta key doesn't already exist,
+a new row in the database table will be added. If the **$previousValue**
+parameter is passed, the meta entry with that value will be updated.
+
+## Parameters
+
+**$licenseId** *(string) (Required)*<br/>
+The ID of the license key.
+
+**$metaKey** *(string) (Required)*<br/>
+Name of the meta entry.
+
+**$metaValue** *(mixed) (Required)*<br/>
+Value of the meta entry.
+
+**$previousValue** *(mixed) (Optional)*<br/>
+The previous value of the meta entry.
+
+## Return value
+
+*(bool)*<br/>
+True on success, false on failure.
+
+## Source code
+
+<p><a href={"https://github.com/drazenbebic/license-manager-for-woocommerce/blob/master/functions/lmfwc-meta-functions.php#L107"}
+      target={"_blank"}
+      rel={"noopener noreferrer"}>/includes/functions/lmfwc-meta-functions.php#107</a></p>
+

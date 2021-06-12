@@ -1,0 +1,41 @@
+---
+title: Retrieve a generator
+description:
+lastModified: 14.03.2021
+---
+
+## Description
+
+Retrieves a single generator by its ID. The response contains the generator
+data object.
+
+## Request URL
+
+<div className={"doc-request-example"} style={{ marginBottom: '1em' }}>
+  <div className={"method get"}>GET</div>
+  <div className={"url"}>/wp-json/lmfwc/v2/generators/<span className={"variable"}>&#123;GENERATOR_ID&#125;</span></div>
+</div>
+
+## Response example
+
+```
+{
+  "success": true,
+  "data": {
+    "id": "2",
+    "name": "My second generator",
+    "charset": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+    "chunks": "3",
+    "chunkLength": "6",
+    "timesActivatedMax": "1",
+    "separator": "-",
+    "prefix": null,
+    "suffix": null,
+    "expiresIn": null,
+    "createdAt": "2019-09-04 18:11:38",
+    "createdBy": "1",
+    "updatedAt": null,
+    "updatedBy": null
+  }
+}
+```

@@ -1,0 +1,59 @@
+---
+title: List all generators
+description:
+lastModified: 14.03.2021
+---
+
+## Description
+
+Retrieves all currently available generators. The response will contain an
+array of generator data objects.
+
+## Request URL
+
+<div className={"doc-request-example"} style={{ marginBottom: '1em' }}>
+  <div className={"method get"}>GET</div>
+  <div className={"url"}>/wp-json/lmfwc/v2/generators</div>
+</div>
+
+## Response example
+
+```
+{
+  "success": true,
+  "data": [
+    {
+      "id": "1",
+      "name": "My first generator",
+      "charset": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+      "chunks": "3",
+      "chunkLength": "6",
+      "timesActivatedMax": "1",
+      "separator": "-",
+      "prefix": null,
+      "suffix": null,
+      "expiresIn": null,
+      "createdAt": "2019-09-04 18:09:06",
+      "createdBy": "1",
+      "updatedAt": null,
+      "updatedBy": null
+    },
+    {
+      "id": "2",
+      "name": "My second generator",
+      "charset": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+      "chunks": "3",
+      "chunkLength": "6",
+      "timesActivatedMax": "1",
+      "separator": "-",
+      "prefix": null,
+      "suffix": null,
+      "expiresIn": null,
+      "createdAt": "2019-09-04 18:11:38",
+      "createdBy": "1",
+      "updatedAt": null,
+      "updatedBy": null
+    }
+  ]
+}
+```

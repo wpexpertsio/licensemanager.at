@@ -1,0 +1,38 @@
+---
+title: Update a product
+description:
+lastModified: 14.03.2021
+---
+
+## Description
+
+This route is used to receive information about the currently installed
+plugin/product sold the customer.
+
+## Request URL
+
+<div className={"doc-request-example"} style={{ marginBottom: '1em' }}>
+  <div className={"method get"}>GET</div>
+  <div className={"url"}>/wp-json/lmfwc/v2/products/update/<span className={"variable"}>&#123;LICENSE&#125;</span></div>
+</div>
+
+## Response example
+
+```
+{
+  "success": true,
+  "data": {
+    "license_key": "FOO-FIGHTERS",
+    "url": "https://example.com/shop/plugins/",
+    "new_version": "1.1.0",
+    "package": "https://example.com/wp-json/lmfwc/v2/products/download/latest/FOO-FIGHTERS",
+    "tested": "5.5.3",
+    "requires": "5.4.0",
+    "requires_php": "7.0.0",
+    "last_updated": "2020-12-01 23:29:57",
+    "sections": {
+      "changelog": "<p><strong>1.0.0</strong></p><ul><li>Initial release</li></ul>"
+    }
+  }
+}
+```

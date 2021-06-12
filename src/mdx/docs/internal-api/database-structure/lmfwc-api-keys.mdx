@@ -1,0 +1,23 @@
+---
+title: lmfwc_api_keys
+description:
+lastModified: 14.03.2021
+---
+
+## Table structure
+
+Name | Type | Null | Default
+--- | --- | --- | --- |
+id <i class="fas fa-key" title="Primary"></i> | `BIGINT(20)` | `false` | *None*
+user_id | `BIGINT(20)` | `false` | *None*
+description | `VARCHAR(200)` | `true` | `null`
+permissions | `VARCHAR(10)` | `false` | *None*
+consumer_key | `CHAR(64)` | `false` | *None*
+consumer_secret | `CHAR(43)` | `false` | *None*
+nonces | `LONGTEXT` | `true` | `null`
+truncated_key | `CHAR(7)` | `false` | *None*
+last_access | `DATETIME` | `true` | `null`
+created_at | `DATETIME` | `true` | `null`
+created_by | `BIGING(20)` | `true` | `null`
+updated_at | `DATETIME` | `true` | `null`
+updated_by | `BIGING(20)` | `true` | `null`

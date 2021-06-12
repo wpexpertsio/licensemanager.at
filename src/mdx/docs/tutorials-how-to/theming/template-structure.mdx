@@ -1,0 +1,23 @@
+---
+title: Template structure & Overriding templates via a theme
+description:
+lastModified: 08.06.2021
+---
+
+License Manager for WooCommerce template files contain the markup and template
+structure for frontend and HTML emails of your store.
+
+## How to edit template files
+
+Edit files in an upgrade-safe way using overrides. Copy the template into a
+directory within your theme named /woocommerce keeping the same file structure
+but removing the /templates/ subdirectory.
+
+Example: To change the **Your license key(s)** heading text in the license
+delivery email, copy: `wp-content/plugins/license-manager-for-woocommerce/templates/emails/lmfwc-email-order-license-keys.php`
+to `wp-content/themes/yourtheme/woocommerce/emails/emails/lmfwc-email-order-license-keys.php`
+
+The copied file is safe to edit and will now override the default template file.
+
+>Do not edit these files within the core plugin itself as they are
+overwritten during the upgrade process and any customizations will be lost.

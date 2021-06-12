@@ -8,7 +8,7 @@ class Header extends React.Component {
       <header style={{ backgroundImage: `url(${logo})` }}>
         <div>
           <h1>License Manager for WooCommerce</h1>
-          <p>Easily sell and manage software license keys through your shop</p>
+          <p>Easily sell and manage software license keys through your WooCommerce shop</p>
         </div>
       </header>
     )

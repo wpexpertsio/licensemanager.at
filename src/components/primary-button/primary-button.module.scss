@@ -1,14 +1,12 @@
 .primary-button {
   display: block;
-  font-size: .85em;
   text-decoration: none;
-  color: #dd3478;
-  border: 2px solid #dd3478;
+  color: #DF2E7F;
+  background: #FDF5F9;
+  border-radius: 4px;
   line-height: 1em;
-  text-align: center;
-  text-transform: uppercase;
-  padding: 0.6em 1em;
-  font-weight: 700;
+  padding: .75em 1em;
+  font-weight: 600;
   -webkit-transition: all .3s ease 0ms;
      -moz-transition: all .3s ease 0ms;
       -ms-transition: all .3s ease 0ms;
@@ -20,7 +18,7 @@
   }
 
   &:hover {
-    background-color: #dd3478;
+    background-color: #DF2E7F;
     color: #FFFFFF;
   }
 }

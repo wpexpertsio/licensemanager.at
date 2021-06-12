@@ -1,0 +1,31 @@
+---
+title: lmfwc_get_licenses()
+description:
+lastModified: 14.03.2021
+---
+
+```
+function lmfwc_get_licenses(array $query)
+```
+
+## Description
+
+Retrieves multiple existing licenses from the database.
+
+## Parameters
+
+**$query** *(array) (Required)*<br/>
+Key/value pairs. The keys will be used to  match the license table columns
+names, and the values will be used to match the values of those columns.
+
+
+## Return value
+
+*(bool|LicenseManagerForWooCommerce\Models\Resources\License[])*<br/>
+License model array on success, false on failure.
+
+## Source code
+
+<p><a href={"https://github.com/drazenbebic/license-manager-for-woocommerce/blob/master/functions/lmfwc-license-functions.php#L136"}
+      target={"_blank"}
+      rel={"noopener noreferrer"}>/includes/functions/lmfwc-license-functions.php#136</a></p>

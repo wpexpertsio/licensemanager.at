@@ -4,61 +4,37 @@ const slash = require(`slash`)
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  // Query content for WordPress Docs
   const docs = await graphql(`
     query {
-      allWordpressWpDocs(filter: {status: {eq: "publish"}}) {
+      allMdx {
         edges {
           node {
-            id
-            wordpress_id
-            wordpress_parent
-            path
+            id,
+            slug
           }
         }
       }
     }
   `);
 
-  const posts = await graphql(`
-    query {
-      allWordpressPost(filter: {status: {eq: "publish"}}) {
-        edges {
-          node {
-            id
-            path
-          }
-        }
-      }
+  const docsTemplate = path.resolve(`./src/templates/doc/doc.js`);
+  const blogTemplate = path.resolve(`./src/templates/blog/blog.js`);
+
+  docs.data.allMdx.edges.forEach(({ node }, index) => {
+    let template;
+
+    if (node.slug.substr(0, 4) === 'docs') {
+      template = docsTemplate;
+    } else {
+      template = blogTemplate;
     }
-  `);
 
-  const docTemplate  = path.resolve(`./src/templates/doc/doc.js`);
-  const postTemplate = path.resolve(`./src/templates/post/post.js`);
-
-  docs.data.allWordpressWpDocs.edges.forEach(edge => {
     createPage({
-      // will be the url for the page
-      path: edge.node.path,
-      // specify the component template of your choice
-      component: slash(docTemplate),
-      // In the ^template's GraphQL query, 'id' will be available
-      // as a GraphQL variable to query for this posts's data.
+      path: node.slug,
+      component: slash(template),
       context: {
-        id: edge.node.id,
-        wordpress_id: edge.node.wordpress_id,
-        wordpress_parent: edge.node.wordpress_parent
-      },
-    })
-  });
-
-  posts.data.allWordpressPost.edges.forEach(edge => {
-    createPage({
-      path: 'blog' + edge.node.path,
-      component: slash(postTemplate),
-      context: {
-        id: edge.node.id
+        id: node.id
       }
-    })
+    });
   });
 }

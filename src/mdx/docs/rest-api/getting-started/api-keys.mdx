@@ -1,0 +1,40 @@
+---
+title: API keys
+description:
+lastModified: 14.03.2021
+---
+
+To access the REST API routes, you will first need to create a pair of **API
+keys**. These API keys are used to access the REST API routes as a specific
+user.
+
+Navigate to the **License Manager** → **Settings** → **REST API keys**. Here
+you will be presented with the following screen:
+
+![Overview of REST API keys](../../../../images/docs/rest-api/getting-started/api-keys/overview-of-rest-api-keys.png)
+<p className={"image-desc"}>Overview of REST API keys</p>
+
+On this screen, press the “**Add key**” button at the top of the page. From
+here on, you will be redirected to the following form:
+
+![“Create REST API keys” form](../../../../images/docs/rest-api/getting-started/api-keys/creating-rest-api-keys.png)
+<p className={"image-desc"}>“Create REST API keys” form</p>
+
+All fields are required. The “**Description**” field provides a name for this
+REST API key pair, which should summarize what it is the keys are being used
+for. The “User” field is a searchable dropdown field which determines to whom
+these keys will be assigned to. The “Permissions” field grants the REST API
+keys either read, write, or read/write permissions.
+
+After filling out the form and pressing the “**Generate API key**” button, you
+will be redirected to the following page:
+
+![REST API keys have been created](../../../../images/docs/rest-api/getting-started/api-keys/rest-api-key.png)
+<p className={"image-desc"}>REST API keys have been created</p>
+
+As the success message instructs, you should now **store these keys somewhere
+safe**, as this is the last time you will see the secret key. If you do not
+save the REST API keys, or lose them, you will not be able to recover them.
+Because the consumer secret is stored as a hash inside the database, it is
+impossible to revert. Should this occur, you will need to generate a pair of
+new REST API keys.

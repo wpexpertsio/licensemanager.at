@@ -1,0 +1,56 @@
+---
+title: Modifying response data
+description:
+lastModified: 14.03.2021
+---
+
+This tutorial will demonstrate how you can modify the REST API response. In
+this example, we will create an activation object consisting of an ID, the
+client proxy (should the client be using one), and the client IP address. This
+activation object will be stored in the license meta when the “Activate
+license” request has been made. The same methods and techniques shown here can
+be used to modify any other response. You can even remove response data, by
+using the PHP `unset()` method.
+
+To sum everything up, we will demonstrate the following:
+
+
+1. Hooking into the `lmfwc_rest_api_pre_response` filter.
+2. Creating an activation object
+3. Storing our activation object inside the license meta
+4. Adding our activation object back to the response.
+
+The process is rather simple, you need to hook into the
+`lmfwc_rest_api_pre_response` filter by using the WordPress method
+`add_filter()`. This filter takes 3 arguments. Your code would then look
+something like this:
+
+```
+function lmfwc_tutorial_modify_response($method, $route, $data) {
+    // First check if we are on the correct route
+    if ($route !== 'v2/licenses/activate/{license_key}') {
+        return $data;
+    }
+
+    // Now we will save an activation object for this license/activation. The
+    // activation object will be an array consisting of an ID, the proxy (if
+    // The remote party is using a proxy), and the user's remote address (IP).
+    // Please note that we're just using the PHP "uniqid()" method for the ID,
+    // you can of course use something more appropriate.
+    $activation = array(
+        'id' => uniqid(),
+        'http_x_forwarded_for' => $_SERVER['HTTP_X_FORWARDED_FOR'],
+        'remote_addr' => $_SERVER['REMOTE_ADDR']
+    );
+
+    // Save to the license meta
+    lmfwc_add_license_meta($data['id'], 'activation', $activation);
+
+    // Add the $activation variable to the response
+    $data['activation'] = $activation;
+
+    // Return the result
+    return $data;
+}
+add_filter('lmfwc_rest_api_pre_response', 'lmfwc_tutorial_modify_response', 10, 3);
+```

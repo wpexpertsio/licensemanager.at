@@ -1,0 +1,59 @@
+---
+title: List licenses
+description:
+lastModified: 14.03.2021
+---
+
+## Description
+
+This route is used to retrieve **all license keys from the database**. Be very
+careful, if you do not need to use this API route in your productive environment then it is best to disable the route altogether via the settings page. The response contains an array of license key data objects.
+
+## Request URL
+
+<div className={"doc-request-example"} style={{ marginBottom: '1em' }}>
+  <div className={"method get"}>GET</div>
+  <div className={"url"}>/wp-json/lmfwc/v2/licenses</div>
+</div>
+
+## Response example
+
+```
+{
+  "success": true,
+  "data": [
+    {
+      "id": "2",
+      "orderId": null,
+      "productId": "1777",
+      "licenseKey": "FOO-FIGHTERS",
+      "expiresAt": null,
+      "validFor": "365",
+      "source": "3",
+      "status": "3",
+      "timesActivated": null,
+      "timesActivatedMax": "1",
+      "createdAt": "2019-09-04 18:12:38",
+      "createdBy": "1",
+      "updatedAt": null,
+      "updatedBy": null
+    },
+    {
+      "id": "3",
+      "orderId": null,
+      "productId": "1777",
+      "licenseKey": "THE-PRETENDER",
+      "expiresAt": null,
+      "validFor": "365",
+      "source": "3",
+      "status": "3",
+      "timesActivated": null,
+      "timesActivatedMax": "1",
+      "createdAt": "2019-09-04 18:13:08",
+      "createdBy": "1",
+      "updatedAt": null,
+      "updatedBy": null
+    }
+  ]
+}
+```

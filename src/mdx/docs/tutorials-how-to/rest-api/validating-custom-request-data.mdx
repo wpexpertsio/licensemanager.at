@@ -1,0 +1,83 @@
+---
+title: Validating custom request data
+description:
+lastModified: 14.03.2021
+---
+
+This tutorial will demonstrate how you can perform additional request data
+validation, and abort a REST API call if your validation did not pass. In this
+specific tutorial we will **pass an additional UUID to the license activation
+request**, then check if the license has previously been activated using that
+UUID, if that’s the case we will return an error.
+
+To sum everything up, we will demonstrate the following:
+
+1. Adding additional parameters to the activation request
+2. Validating the additional parameters on server-side
+3. Returning an error if validation did not pass
+
+The first thing you need to do, is to modify your REST API license activation
+request. Simply add a JSON object with a key named `uuid` and its value. It’s
+also important to set the `Content-Type` header to `application/json`.
+
+Then, you will need to pass a function to the `lmfwc_rest_api_validation`
+filter. This filter takes 3 arguments. The function in that filter will look
+something like this:
+
+```php
+function lmfwc_tutorial_check_uuid($result, $server, $request) {
+    // Not our route, nothing to do...
+    if (strpos($request->get_route(), '/lmfwc/v2/licenses/activate') === false) {
+        return true;
+    }
+
+    // Retrieve the body parameters
+    $body = $request->get_json_params();
+
+    // The request body was empty, or the "uuid" property is missing.
+    if (!$body || !array_key_exists('uuid', $body)) {
+        return new WP_Error(
+            'lmfwc_rest_data_error',
+            'The UUID is missing from the request.',
+            array('status' => 400)
+        );
+    }
+
+    // Obtain the license key from the request URL
+    $licenseKey = explode('/lmfwc/v2/licenses/activate/', $request->get_route())[1];
+
+    // Retrieve the license object
+    $license = lmfwc_get_license($licenseKey);
+
+    // The license was not found
+    if (!$license) {
+        return new WP_Error(
+            'lmfwc_rest_validation_error',
+            'The license was not found.',
+            array('status' => 404)
+        );
+    }
+
+    // Check if the license key already has this UUID
+    $previousActivation = lmfwc_get_license_meta($license->getId(), 'activation_uuid', true);
+
+    // Throw an error if that's the case
+    if ($previousActivation && $previousActivation === $body['uuid']) {
+        return new WP_Error(
+            'lmfwc_rest_validation_error',
+            'The license was already activated using this UUID.',
+            array('status' => 403)
+        );
+    }
+
+    // Hasn't been used before, proceed
+    return true;
+}
+add_filter('lmfwc_rest_api_validation', 'lmfwc_tutorial_check_uuid', 10, 3);
+```
+
+We first must check if we are on the correct route. If so, the function will
+then retrieve all needed variables and check if they are correct. Lastly, we
+obtain the `activation_uuid` meta key from the license, and check its value
+against the value provided in the request body. Please note, that the meta key
+name can be anything, it’s up to you to define it.

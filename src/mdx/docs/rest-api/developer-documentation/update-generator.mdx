@@ -1,0 +1,63 @@
+---
+title: Update a generator
+description:
+lastModified: 14.03.2021
+---
+
+## Description
+
+Updates a generator by its ID. The response contains the updated generator data
+object.
+
+## Request URL
+
+<div className={"doc-request-example"} style={{ marginBottom: '1em' }}>
+  <div className={"method put"}>PUT</div>
+  <div className={"url"}>/wp-json/lmfwc/v2/generators/<span className={"variable"}>&#123;GENERATOR_ID&#125;</span></div>
+</div>
+
+## Request headers
+
+```
+Content-Type: application/json
+```
+
+## Request Body
+
+```
+{
+  "name": "Generator edited by the API",
+  "charset": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+  "chunks": "5",
+  "chunk_length": "6",
+  "times_activated_max": 1,
+  "separator": "+",
+  "prefix": "API-",
+  "suffix": "-GEN",
+  "expires_in": 730
+}
+```
+
+## Response example
+
+```
+{
+  "success": true,
+  "data": {
+    "id": "4",
+    "name": "Generator edited by the API",
+    "charset": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+    "chunks": "5",
+    "chunkLength": "6",
+    "timesActivatedMax": "1",
+    "separator": "+",
+    "prefix": "API-",
+    "suffix": "-GEN",
+    "expiresIn": "730",
+    "createdAt": "2019-09-04 18:21:51",
+    "createdBy": "1",
+    "updatedAt": "2019-09-04 18:22:37",
+    "updatedBy": "1"
+  }
+}
+```

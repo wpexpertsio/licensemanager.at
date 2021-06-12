@@ -1,0 +1,29 @@
+---
+title: lmfwc_deactivate_license()
+description:
+lastModified: 14.03.2021
+---
+
+```
+function lmfwc_deactivate_license(string $licenseKey)
+```
+
+## Description
+
+Deactivates a license if it has not already reached 0 activations.
+
+## Parameters
+
+**$licenseKey** *(string) (Required)*<br/>
+The license key to deactivate.
+
+## Return value
+
+*(bool|LicenseManagerForWooCommerce\Models\Resources\License)*<br/>
+License model on success, false on failure.
+
+## Source code
+
+<p><a href={"https://github.com/drazenbebic/license-manager-for-woocommerce/blob/master/functions/lmfwc-license-functions.php#L399"}
+      target={"_blank"}
+      rel={"noopener noreferrer"}>/includes/functions/lmfwc-license-functions.php#399</a></p>

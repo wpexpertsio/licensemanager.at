@@ -1,34 +1,33 @@
 html, body {
     color: #666;
-    background-color: #f8f9fa;
+    background-color: #ffffff;
+    font-size: 16px;
+    text-rendering: optimizelegibility;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #333333;
+    color: #000500;
+    font-feature-settings: "lnum";
+    font-variant-numeric: lining-nums;
+    font-weight: 700;
+    letter-spacing: -0.0415625em;
+    line-height: 1.25;
 }
 
 a {
     text-decoration: none;
-    color: #8F1948;
+    color: #df2e7f;
 }
 
 video {
     max-width: 100%;
 }
 code {
-    color: #DD3478;
-    background-color: #FDF3F7;
-    padding: .25em 0.375em;
-    -webkit-box-shadow: 1px 1px 2px #DD3478;
-       -moz-box-shadow: 1px 1px 2px #DD3478;
-            box-shadow: 1px 1px 2px #DD3478;
+    background-color: #fdf5f9;
+    color: #df2e7f;
+    padding: 0 5px;
 }
 
-
-.container {
-    margin: 0 auto;
-    width: 90%;
-}
 
 .row {
     margin-bottom: 1em;

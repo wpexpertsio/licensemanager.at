@@ -1,0 +1,28 @@
+---
+title: Security
+description:
+lastModified: 14.03.2021
+---
+
+The plugin will also create a **.htaccess** file in the above-mentioned directory. This file is used to disable direct
+browser access to the folder, preventing unwanted visitors from seeing your cryptographic secrets.
+
+However, if your server is running NGINX instead of Apache, then the file is completely ignored. In this case you can
+either manually create a NGINX directive, or follow the guide in the optimization subsection (recommended).
+
+We recommend that you move the cryptographic secrets into the configuration file of your WordPress website, also known
+as „**wp-config.php**“. This will reduce the amount of requests to the server file system and move the cryptographic
+secrets to a safer place.
+
+To do this, open the **wp-config.php** file and add the following lines to it:
+
+```
+define('LMFWC_PLUGIN_SECRET', 'secret.txt');
+define('LMFWC_PLUGIN_DEFUSE', 'defuse.txt');
+```
+
+Replace **secret.txt** and **defuse.txt** with their file contents, respectively. Afterwards, create a backup of these two
+files somewhere safe (if you haven’t already) and delete the lmfwc-files directory completely.
+
+If your license keys are not visible anymore, then something went wrong. You can always restore the files and remove
+the two added lines to revert the changes.

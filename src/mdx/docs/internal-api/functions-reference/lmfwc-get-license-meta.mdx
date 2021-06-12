@@ -1,0 +1,37 @@
+---
+title: lmfwc_get_license_meta()
+description:
+lastModified: 14.03.2021
+---
+
+```
+function lmfwc_get_license_meta(int $licenseId, string $metaKey, bool $single = false)
+```
+
+## Description
+
+Retrieves single or multiple license meta entries.
+
+## Parameters
+
+**$licenseId** *(string) (Required)*<br/>
+The ID of the license key.
+
+**$metaKey** *(string) (Required)*<br/>
+Name of the meta entry.
+
+**$single** *(bool) (Optional)*<br/>
+If multiple meta entries exists, setting this parameter to **true** will retrieve
+all of them.
+
+## Return value
+
+*(mixed|mixed[]|bool)*<br/>
+Meta value on success, false on failure.
+
+## Source code
+
+<p><a href={"https://github.com/drazenbebic/license-manager-for-woocommerce/blob/master/functions/lmfwc-meta-functions.php#L57"}
+      target={"_blank"}
+      rel={"noopener noreferrer"}>/includes/functions/lmfwc-meta-functions.php#57</a></p>
+

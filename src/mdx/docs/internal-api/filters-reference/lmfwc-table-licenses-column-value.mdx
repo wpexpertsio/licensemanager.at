@@ -1,0 +1,33 @@
+---
+title: lmfwc_table_licenses_column_value
+description:
+lastModified: 14.03.2021
+---
+
+## Description
+
+This filter is used to add or modify column values on the **Licenses**
+page/table.
+
+## Parameters
+
+Name | Type | Description
+--- | --- | ---
+`$item` | `Array` | Associative array of column name and value pairs.
+`$column_name` | `Array` | Name of the current column.
+
+## Usage
+
+```
+add_filter('lmfwc_table_licenses_column_name', function($columns) {
+  if ($column_name !== 'foo_fighters') {
+    return $item;
+  }
+
+  $item[$column_name] = "Walk";
+
+  return $item;
+});
+```
+
+This will add the text "Walk" into the **foo_fighters** column.

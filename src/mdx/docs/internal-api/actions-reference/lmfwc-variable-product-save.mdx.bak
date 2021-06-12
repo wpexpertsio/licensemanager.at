@@ -1,0 +1,40 @@
+---
+title: lmfwc_variable_product_save
+description:
+lastModified: 14.03.2021
+---
+
+## Description
+
+This action allows you to perform additional action during the **POST**
+request which is triggered when saving a variable WooCommerce product.
+
+## Parameters
+
+Name | Type | Description
+--- | --- | ---
+`$variation_id` | `int` | WooCommerce Product Variation ID
+`$loop` | `int` | Current variation loop
+
+## Usage
+
+```
+add_action('lmfwc_variable_product_save', function($variation_id) {
+
+  if (isset($_POST['favorite_foo_fighters_song'][$loop])) {
+    $value = sanitize_text_field(
+      $_POST['favorite_foo_fighters_song'][$loop]
+    );
+
+    update_post_meta(
+      $variation_id,
+      'favorite_foo_fighters_song',
+      $value
+    );
+  }
+
+});
+```
+
+This will store the POST field **favorite_foo_fighters_song** into the
+Product's post meta.

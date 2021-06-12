@@ -1,0 +1,62 @@
+---
+title: Update a license
+description:
+lastModified: 14.03.2021
+---
+
+## Description
+
+Performs an update of the license key. The request will not update key values
+that aren't present in the request body, however if they are present their
+value will be updated, even if it’s a null value. The request will return the
+updated license key data object.
+
+## Request URL
+
+<div className={"doc-request-example"} style={{ marginBottom: '1em' }}>
+  <div className={"method put"}>PUT</div>
+  <div className={"url"}>/wp-json/lmfwc/v2/licenses/<span className={"variable"}>&#123;LICENSE&#125;</span></div>
+</div>
+
+## Request headers
+
+```
+Content-Type: application/json
+```
+
+## Request body
+
+```
+{
+  "order_id": null,
+  "product_id": null,
+  "license_key": "THE-PRETENDER",
+  "valid_for": null,
+  "times_activated_max": 999,
+  "status": "ACTIVE"
+}
+```
+
+## Response example
+
+```
+{
+  "success": true,
+  "data": {
+    "id": "2",
+    "orderId": null,
+    "productId": null,
+    "licenseKey": "THE-PRETENDER",
+    "expiresAt": null,
+    "validFor": null,
+    "source": "3",
+    "status": "3",
+    "timesActivated": null,
+    "timesActivatedMax": "999",
+    "createdAt": "2019-09-04 18:12:38",
+    "createdBy": "1",
+    "updatedAt": "2019-09-04 18:15:14",
+    "updatedBy": "1"
+  }
+}
+```

@@ -1,0 +1,33 @@
+---
+title: lmfwc_event_post_order_license_keys
+description:
+lastModified: 09.06.2021
+---
+
+## Description
+
+This action fires after license keys have been sold. The hook fires for license
+keys which have been generated, as well as license keys which have been sold
+from stock.
+
+## Parameters
+
+Name | Type | Description
+--- | --- | ---
+`$args` | `array` | Associative array containing two keys: `orderId` and `licenses`.
+
+## Usage
+
+```
+add_action('lmfwc_event_post_order_license_keys', function($args) {
+
+  $orderId = $args['orderId'];
+  $licenses = $args['licenses'];
+
+  foreach ($licenses as $license) {
+    // Do something
+  }
+
+});
+```
+

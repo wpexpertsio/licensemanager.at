@@ -1,0 +1,41 @@
+---
+title: Retrieve a license
+description:
+lastModified: 14.03.2021
+---
+
+## Description
+
+Retrieves a single license key by the license key string itself. The response
+contains the queried license key data object.
+
+## Request URL
+
+<div className={"doc-request-example"} style={{ marginBottom: '1em' }}>
+  <div className={"method get"}>GET</div>
+  <div className={"url"}>/wp-json/lmfwc/v2/licenses/<span className={"variable"}>&#123;LICENSE&#125;</span></div>
+</div>
+
+## Response example
+
+```
+{
+  "success": true,
+  "data": {
+    "id": "2",
+    "orderId": null,
+    "productId": "1777",
+    "licenseKey": "FOO-FIGHTERS",
+    "expiresAt": null,
+    "validFor": "365",
+    "source": "3",
+    "status": "3",
+    "timesActivated": null,
+    "timesActivatedMax": "1",
+    "createdAt": "2019-09-04 18:12:38",
+    "createdBy": "1",
+    "updatedAt": null,
+    "updatedBy": null
+  }
+}
+```

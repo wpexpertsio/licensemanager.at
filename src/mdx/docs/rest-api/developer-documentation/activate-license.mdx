@@ -1,0 +1,44 @@
+---
+title: Activate a license
+description:
+lastModified: 09.06.2021
+---
+
+## Description
+
+Increments the `times_activated` value by one (1). The plugin will check if
+there is a `times_activated_max` value, if there is and if the
+`times_activated` value has not reached the limit set by `times_activated_max`,
+then the `times_activated` will be incremented by 1, and the updated license
+key data object will be returned.
+
+## Request URL
+
+<div className={"doc-request-example"} style={{ marginBottom: '1em' }}>
+  <div className={"method get"}>GET</div>
+  <div className={"url"}>/wp-json/lmfwc/v2/licenses/activate/<span className={"variable"}>&#123;LICENSE&#125;</span></div>
+</div>
+
+## Response example
+
+```
+{
+  "success": true,
+  "data": {
+    "id": "2",
+    "orderId": null,
+    "productId": null,
+    "licenseKey": "THE-PRETENDER",
+    "expiresAt": null,
+    "validFor": null,
+    "source": "3",
+    "status": "3",
+    "timesActivated": "1",
+    "timesActivatedMax": "999",
+    "createdAt": "2019-09-04 18:12:38",
+    "createdBy": "1",
+    "updatedAt": "2019-09-04 18:19:23",
+    "updatedBy": "1"
+  }
+}
+```
