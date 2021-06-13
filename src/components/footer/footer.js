@@ -110,19 +110,19 @@ export default class Footer extends React.Component {
                               href="https://www.jetbrains.com/?from=license-manager-for-woocommerce"
                               target="_blank"
                               rel="noopener noreferrer">
-                  <img src={ logoPhpStorm } alt="PhpStorm" title="PhpStorm"/>
+                  <img src={ logoPhpStorm } alt="PhpStorm" width={36} height={36} title="PhpStorm"/>
                 </OutboundLink>
                 <OutboundLink className={"built-with"}
                               href="https://www.jetbrains.com/?from=license-manager-for-woocommerce"
                               target="_blank"
                               rel="noopener noreferrer">
-                  <img src={ logoDataGrip } alt="DataGrip" title="DataGrip"/>
+                  <img src={ logoDataGrip } alt="DataGrip" width={36} height={36} title="DataGrip"/>
                 </OutboundLink>
                 <OutboundLink className={"built-with"}
                               href="https://www.gatsbyjs.org/"
                               target="_blank"
                               rel="noopener noreferrer">
-                  <img src={ logoGatsbyJs } alt="GatsbyJS" title="Gatsby JS"/>
+                  <img src={ logoGatsbyJs } alt="GatsbyJS" width={36} height={36} title="Gatsby JS"/>
                 </OutboundLink>
               </div>
 
