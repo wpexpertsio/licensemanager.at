@@ -66,7 +66,7 @@
 
       .url {
         color: #df2e7f;
-        font-weight: 500;
+        font-weight: 400;
         background-color: #fdf5f9;
         font-family: monospace;
         padding: .25em 1em;
@@ -74,7 +74,7 @@
         border-bottom-right-radius: 5px;
 
         .variable {
-          font-weight: 600;
+          font-weight: bold;
         }
       }
     }
@@ -170,7 +170,7 @@
           background-color: #FFFFFF;
           padding: 4px 10px;
           border-radius: 4px;
-          font-weight: normal;
+          font-weight: 400;
           -webkit-text-decoration: none;
           text-decoration: none;
           width: 100%;
