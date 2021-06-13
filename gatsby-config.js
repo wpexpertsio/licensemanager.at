@@ -177,6 +177,9 @@ module.exports = {
             type: `image/png`
           },
         ],
+        icon_options: {
+          purpose: `any maskable`
+        },
         start_url: `/`,
         background_color: `#FFFFFF`,
         theme_color: `#DF2E7F`
