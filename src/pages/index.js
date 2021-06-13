@@ -40,10 +40,12 @@ class Index extends React.Component {
               and manage your software licenses. The plugin also extends the WordPress REST API, allowing you to
               perform actions such as license activation or deactivation remotely, turning your WordPress instance
               into a licensing server</p>
-            <p>The plugin is, and always will be, a 100% free. If you like the plugin please <a
+            <p>The plugin is, and always will be, absolutely free of charge. If you like the plugin, please take a
+              moment to <a
               href="https://wordpress.org/support/plugin/license-manager-for-woocommerce/reviews/#new-post"
               target="_blank" rel="noopener noreferrer">rate it on WordPress.org</a>. You can also support development
-              by <Link to="/donate/">donating</Link>.</p>
+              by <Link to="/donate/">donating</Link>. Half of the proceeds from these donations are forwarded to a
+              charitable cause.</p>
           </div>
 
         </div>
@@ -81,27 +83,14 @@ class Index extends React.Component {
           <div className="col-6">
             <Card>
               <div className="card-icon">
-                <i className="fas fa-sync"/>
-              </div>
-              <div className="card-text">
-                <h3>WooCommerce Subscriptions Integration</h3>
-                <p>When using <u>WooCommerce Subscriptions</u>, our plugin will help you with your workflow by
-                  automatically extending existing licenses. Depending on your preference, you can extend licenses
-                  using the subscription interval, a custom interval - or issue a new license altogether.</p>
-              </div>
-            </Card>
-          </div>
-
-          <div className="col-6">
-            <Card>
-              <div className="card-icon">
                 <i className="fas fa-cloud"/>
               </div>
               <div className="card-text">
                 <h3>REST API</h3>
                 <p>Activate, deactivate, and validate licenses using the plugin's new endpoints. You can further
-                  customize these requests by implementing your own validation business logic. Head over to the developer
-                  documentation to get a better overview of what our plugin can do for you.</p>
+                  customize these requests by implementing your own validation business logic. Head over to the <Link
+                    to={"/docs/rest-api/developer-documentation/list-licenses"}>developer documentation</Link> to get a
+                  better overview of what our plugin can do for you.</p>
               </div>
             </Card>
           </div>
