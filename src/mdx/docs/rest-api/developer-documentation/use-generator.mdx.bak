@@ -13,7 +13,7 @@ request will return the generated licenses as an array of objects.
 
 <div className={"doc-request-example"} style={{ marginBottom: '1em' }}>
   <div className={"method post"}>POST</div>
-  <div className={"url"}>/wp-json/lmfwc/v2/generators/<span className={"variable"}>&#123;GENERATOR_ID&#125;</span>/generate</div>
+  <div className={"url"}>/wp-json/lmfwc/v2/generators/<span className={"variable"}>&#123;generator_id&#125;</span>/generate</div>
 </div>
 
 ## Request headers

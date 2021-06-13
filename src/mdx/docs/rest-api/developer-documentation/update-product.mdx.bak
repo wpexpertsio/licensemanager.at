@@ -13,7 +13,7 @@ plugin/product sold the customer.
 
 <div className={"doc-request-example"} style={{ marginBottom: '1em' }}>
   <div className={"method get"}>GET</div>
-  <div className={"url"}>/wp-json/lmfwc/v2/products/update/<span className={"variable"}>&#123;LICENSE&#125;</span></div>
+  <div className={"url"}>/wp-json/lmfwc/v2/products/update/<span className={"variable"}>&#123;license_key&#125;</span></div>
 </div>
 
 ## Response example

@@ -46,12 +46,13 @@ class Doc extends React.Component {
             <MDXRenderer>{mdx.body}</MDXRenderer>
             <hr/>
             <p className={"help"}>
-              <i className="far fa-envelope"/>
-              <span>Stuck or need help? <Link to={"/contact"}>Let us know!</Link></span>
-
+              <span className={"let-us-know"}>
+                <i className="far fa-envelope"/>
+                Stuck or need help? <Link to={"/contact"}>Let us know!</Link>
+              </span>
               <span className={"last-modified"}>
-                  Updated on: {mdx.frontmatter.lastModified}
-                </span>
+                Updated on: {mdx.frontmatter.lastModified}
+              </span>
             </p>
           </main>
           <aside className={"doc-main-scrollspy"}>
