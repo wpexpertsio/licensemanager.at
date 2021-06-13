@@ -10,7 +10,7 @@ class Navigation extends React.Component {
         <div className={"container"}>
           <div className={"logo"}>
             <Link to={"/"}>
-              <img src={ logo } alt="License Manager for WooCommerce"/>
+              <img src={ logo } alt="License Manager for WooCommerce" width={300} height={25}/>
             </Link>
           </div>
 
