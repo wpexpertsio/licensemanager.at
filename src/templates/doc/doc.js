@@ -32,6 +32,7 @@ class Doc extends React.Component {
 
   render() {
     const mdx = this.props.data.mdx;
+
     return (
       <Layout>
         <Seo title={mdx.frontmatter.title + " | License Manager for WooCommerce"}

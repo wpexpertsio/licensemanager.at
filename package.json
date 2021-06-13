@@ -54,7 +54,8 @@
     "typography": "^0.16.21"
   },
   "devDependencies": {
-    "prettier": "^2.3.1"
+    "prettier": "^2.3.1",
+    "prop-types": "^15.7.2"
   },
   "repository": {
     "type": "git",
