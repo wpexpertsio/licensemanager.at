@@ -35,7 +35,7 @@ class Doc extends React.Component {
 
     return (
       <Layout>
-        <Seo title={mdx.frontmatter.title + " | License Manager for WooCommerce"}
+        <Seo title={mdx.frontmatter.title + " | Documentation"}
              description={mdx.frontmatter.description}/>
 
         <div className={"doc"}>

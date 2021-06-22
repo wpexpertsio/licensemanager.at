@@ -8,7 +8,7 @@ class Donate extends React.Component {
   render() {
     return(
       <Layout>
-        <Seo title="Blog" description="Easily sell and manage your licenses through WooCommerce" />
+        <Seo title="Donate" description="Easily sell and manage your licenses through WooCommerce" />
         <div className="row">
           <div className="col-12">
             <Heading>Thank you for your support!</Heading>

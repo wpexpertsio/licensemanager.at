@@ -6,7 +6,7 @@ class PrivacyPolicy extends React.Component {
   render() {
     return(
       <Layout>
-        <Seo title="Privacy Policy | License Manager for WooCommerce"
+        <Seo title="Privacy Policy"
              description="The License Manager for WooCommerce WordPress Plugin allows you to easily sell and manage your license keys through WooCommerce." />
 
         <div className="row">

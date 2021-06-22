@@ -35,7 +35,7 @@ class Docs extends Component {
 
     return (
       <Layout>
-        <Seo title="Docs" description="Easily sell and manage your licenses through WooCommerce" />
+        <Seo title="Documentation" description="Easily sell and manage your licenses through WooCommerce" />
 
         <div className={"row"}>
           <div className={"col-12"}>

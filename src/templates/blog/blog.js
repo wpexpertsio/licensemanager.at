@@ -5,6 +5,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import { graphql } from "gatsby";
 import moment from "moment";
 import Heading from "../../components/heading/heading";
+import Seo from "../../components/seo";
 
 class Blog extends React.Component {
 
@@ -14,10 +15,11 @@ class Blog extends React.Component {
 
     return (
       <Layout>
+        <Seo title={mdx.frontmatter.title + " | Blog"}/>
 
         <div className={"row"}>
           <div className={"col-12"}>
-            <Heading>{ mdx.frontmatter.title }</Heading>
+            <Heading>{mdx.frontmatter.title}</Heading>
           </div>
         </div>
 
