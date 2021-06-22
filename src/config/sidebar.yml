@@ -136,6 +136,8 @@
           link: '/php'
         - label: 'Ruby'
           link: '/ruby'
+        - label: '.NET'
+          link: '/dot-net'
         - label: 'C'
           link: '/c'
         - label: 'C#'
