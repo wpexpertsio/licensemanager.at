@@ -2,10 +2,16 @@ import React from "react"
 import Layout from "../components/layout/layout"
 import Heading from "../components/heading/heading"
 import payPalLogo from "../images/logo-paypal.webp"
+import dogecoinLogo from "../images/doge.webp"
+import bitcoinLogo from "../images/bitcoin.webp"
 import Seo from "../components/seo"
 
 class Donate extends React.Component {
   render() {
+    const payPalUrl = 'https://www.paypal.me/drazenbebic';
+    const dogeWalletAddress = 'DHL6FYsisHzGvpekVG2jpn5DoDFvggRZf1';
+    const bitcoinWalletAddress = '3LPNHM3dvd4rkkqMrgJxsCkNUXMGtT5kwy';
+
     return(
       <Layout>
         <Seo title="Donate" description="Easily sell and manage your licenses through WooCommerce" />
@@ -18,10 +24,24 @@ class Donate extends React.Component {
               the operating costs you can do so via the PayPal link below. You should also know that <strong>half of the
                 proceeds will be forwarded to <a href="https://www.sos-kinderdorf.at/" target="_blank" rel="noopener noreferrer">SOS Children’s Village</a></strong>,
               an organization dedicated to helping children in need.</p>
-            <p style={{ textAlign: "center" }}>You can send your contribution by clicking the <strong>PayPal</strong> logo below.</p>
+          </div>
+          <div className="col-12">
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <img style={{ display: 'block', marginRight: '1em' }} src={ bitcoinLogo } alt={"Dogecoin"}/>
+              <img style={{ display: 'block' }} src={ dogecoinLogo } alt={"Dogecoin"}/>
+            </div>
+            <p style={{ textAlign: 'center' }}><strong>Now accepting Bitcoin and Dogecoin!</strong></p>
+            <p style={{ textAlign: 'center' }}>You can send any amount to the <strong>Dogecoin</strong> wallet address.
+              The <strong>Bitcoin</strong> address has a <u>minimum deposit amount of 0.00010 BTC</u>.</p>
+            <p style={{ textAlign: 'center' }}>
+              <strong>Bitcoin</strong> <code>{ bitcoinWalletAddress }</code>
+              <br/>
+              <strong>Dogecoin</strong> <code>{ dogeWalletAddress }</code>
+            </p>
           </div>
           <div className="col-12" style={{ textAlign: "center" }}>
-            <a href="https://www.paypal.me/drazenbebic" target="_blank" rel="noopener noreferrer">
+            <p style={{ textAlign: "center" }}>Alternatively, you can send your contribution by clicking the <strong>PayPal</strong> logo below.</p>
+            <a href={ payPalUrl } target="_blank" rel="noopener noreferrer">
               <img src={ payPalLogo } alt="PayPal"/>
             </a>
           </div>
